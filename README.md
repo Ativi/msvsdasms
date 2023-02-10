@@ -35,6 +35,11 @@ $  sudo make install
 
 More info can be found at http://opencircuitdesign.com/magic/index.html
 
+-To check for the functionality of the tool: Type Magic
+
+![magic ](https://user-images.githubusercontent.com/68071764/218156955-1b4ae709-8cfd-493d-92c9-ca8e9f6152c8.png)
+
+
 #### Netgen
 
 
