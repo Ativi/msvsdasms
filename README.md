@@ -2,10 +2,14 @@
 ## Table of contents
 - <b>Week 0</b>
    1. Install Oracle virtual box with Ubuntu 22.04 LTS
-   2. Install Magic, ngspice and SKY130 PDKs
-   3. Install ALIGN tool
-   4. Lab - Checking Tool Installations
-   5. Lab - Creating an Inverter Design
+   2. Installation of Tools and SKY130 PDKs
+      - Magic
+      - Netgen
+      - Ngspice
+      - Xschem
+      - Open_pdks
+      - Align Tool
+   3. Lab - Creating an Inverter Design
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
 
@@ -14,6 +18,7 @@
 
 ###   Install Magic, ngspice and SKY130 PDKs
 
+#### MAGIC
 - Magic is an open-source VLSI layout tool.
 - Handles GDS DEF and LEF, Does extraction and layouts are created and managed.
 - Mainly used to check DRCs and the violations can be fixed by following the design rules.
@@ -27,5 +32,11 @@ $	 ./configure
 $  make
 $  sudo make install
 ```
-   
+
+More info can be found at http://opencircuitdesign.com/magic/index.html
+
+#### Netgen
+
+
+
 
