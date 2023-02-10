@@ -9,7 +9,7 @@
       - Xschem
       - Open_pdks
       - Align Tool
-   3. Lab - Creating an Inverter Design
+   3. Lab - Creating an inverter schematic in Xschem
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
 
@@ -177,7 +177,62 @@ pip install -v -e .[test] --no-build-isolation
 pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TESTING=ON'
 
 ```
-![schematic example](https://user-images.githubusercontent.com/68071764/218163655-0d4e539e-c640-4e41-b9bc-f6b0e75c2a0a.png)
+
+##### Making ALIGN Portable to Sky130 tehnology
+
+- Clone the following Repository inside ALIGN-public directory.
+```
+git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
+```
+
+Move SKY130_PDK folder to ~/Desktop/ALIGN-public/pdks
+
+Everytime we start the tool in new terminal, run the following commands.
+```
+# Running ALIGN TOOL
+    $python -m venv general
+    $source general/bin/activate
+```
+Commands to run ALIGN (goto ALIGN-public directory)
+
+```
+    $mkdir work
+    $cd work
+```
+
+General syntax to give inputs
+```
+schematic2layout.py <NETLIST_DIR> -p <PDK_DIR> -c
+```
+
+EXAMPLE:
+
+schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
+
+![schematic example](https://user-images.githubusercontent.com/68071764/218166479-44909a20-9ed1-43e2-8de3-3b7db150f814.png)
+
+
+### Creating an inverter schematic in Xschem
+
+- Open xschem and after resizing the window to your comfort, open a new schematic from the file menu and press the insert key.
+- Go over to the sky130 directory and select the skky130_fd_pr option for primitive cells, since we need nfet and pfet to build our inverter.
+- A mosfet is a 4 terminal device and it is easier to avoid the fet3 options since they need us to specify the bulk pin as a parameter every time. However here, we will choose the nfet and pfet3, both with 01v8.sym types for demonstration purposes. 
+- Go to the xschem library and then to devices.
+- we need a ipin, opin and an iopin.
+- Once you have all your components on the schematic, use the w button and mouse cursor to connect all wirings and use the q key to change names of the labels.
+- Move over to the pfet and tap q to see the parameters.
+- Change the length to 0.18 since anything below 0.18 is only allowed for SRAM cells.
+- Change width to 3 and nF to 3. Width is counted as total width and is w x nF so that means each finger's width is 1um.
+- For the nfet change length to 0.18 again and change width to 4.5 and nF to 3 since this time we want a width of 1.5u per finger.
+
+![nfet_para](https://user-images.githubusercontent.com/68071764/218169977-64019c5e-faeb-463e-baa8-55700898bbfc.png)
+![inverter 1](https://user-images.githubusercontent.com/68071764/218170015-d181b981-5aea-4d8e-9847-513902e068f0.png)
+
+Once your connections are done your schematic is ready.
+
+![inverter created](https://user-images.githubusercontent.com/68071764/218170364-4638a768-1323-4ef5-9805-e2e5f85cda02.png)
+
+- Go to file --> "Save as" and save as inverter.sch and click on OK. 
 
 
 
