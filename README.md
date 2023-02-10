@@ -39,8 +39,29 @@ More info can be found at http://opencircuitdesign.com/magic/index.html
 
 ![magic ](https://user-images.githubusercontent.com/68071764/218156955-1b4ae709-8cfd-493d-92c9-ca8e9f6152c8.png)
 
+Two windows pop-up
 
-#### Netgen
+  - tkcon console
+
+  - Layout window
+
+
+#### NETGEN
+
+- Netgen is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic"
+- It is completely command driven and has no graphics interface.
+
+Install steps:
+```
+$  git clone git://opencircuitdesign.com/netgen
+$  cd netgen
+$	./configure
+$  make
+$  sudo make install
+```
+![netgentest](https://user-images.githubusercontent.com/68071764/218159486-3c71b97c-777d-4df2-b1c6-09f632683c76.png)
+
+
 
 
 
