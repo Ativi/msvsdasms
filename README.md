@@ -61,7 +61,26 @@ $  sudo make install
 ```
 ![netgentest](https://user-images.githubusercontent.com/68071764/218159486-3c71b97c-777d-4df2-b1c6-09f632683c76.png)
 
+#### NGSPICE
 
+- ngspice is the open-source spice simulator for electric and electronic circuits. 
+- Download ngspice-37 tarball ngspice-37.tar.gz
+- https://ngspice.sourceforge.io/download.html
+
+Install steps:
+```
+
+ $ tar -zxvf ngspice-37.tar.gz
+ $ cd ngspice-37
+ $ mkdir release
+ $ cd release
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ $ make
+ $ sudo make install
+ ```
+ ![ngspicetest](https://user-images.githubusercontent.com/68071764/218160453-51420eb2-0fe2-40c1-8940-5dc4ab7791aa.png)
+
+ 
 
 
 
