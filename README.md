@@ -10,6 +10,7 @@
       - Open_pdks
       - Align Tool
    3. Lab - Creating an inverter schematic in Xschem
+      - Creation of Layout using inverter schematic in layout tool MAGIC
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
 
@@ -262,7 +263,19 @@ Once your connections are done your schematic is ready.
 ![simulation](https://user-images.githubusercontent.com/68071764/218276575-657e42e4-8aed-4b1f-8dc3-109cdeedfb44.png)
 ![graph1](https://user-images.githubusercontent.com/68071764/218276579-459dd06f-ea8a-4534-b173-b02e234e4dc2.png)
 
+- we have verified the working of our inverter schematic and we need a netist of exclusively that, and not our entire testbench. Open the inverter from the files menu and go to suimulation menu and select "LVS netlist: top lvl is a subsckt" and then tap netlist. Exit xschem.
 
+- we need to import the netlist to magic to create the layout. Open magic by moving to the mag directory and using magic -T sky130A.Tech. Go to file --> Import SPICE and select our netlist from the .xschem/simulation folder.
+
+- Once celected, click OK and the tap v on the layout window and you should see this:
+
+![magic_l1](https://user-images.githubusercontent.com/68071764/218327298-a3ff7d7d-64cc-4ba2-9475-63f787bf3722.png)
+
+- Now, just to get a working layout. Select cells by hovering over them and pressing i. Move them to a new location by hovering over the point you want the bottom left corner of the cell to be and pressing m. Once you move the cells around you should have a layout like this.
+
+![layout_mag](https://user-images.githubusercontent.com/68071764/218327350-7aa2089f-4001-4deb-9726-6e9be1f7e6c3.png)
+
+![layoutt](https://user-images.githubusercontent.com/68071764/218327447-940f6758-8fdb-4e81-9156-5c17c20021be.png)
 
 
 
