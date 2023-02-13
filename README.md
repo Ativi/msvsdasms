@@ -307,6 +307,7 @@ netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simula
 ```
 ![lvs done](https://user-images.githubusercontent.com/68071764/218435409-c7ddb76a-8bd9-4634-a2f7-ae0b608210fa.png)
 
+![lcheck](https://user-images.githubusercontent.com/68071764/218447629-76933644-eafe-419d-8afb-4c4a731e4777.png)
 
 
 
