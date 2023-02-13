@@ -277,7 +277,25 @@ Once your connections are done your schematic is ready.
 
 ![layoutt](https://user-images.githubusercontent.com/68071764/218327447-940f6758-8fdb-4e81-9156-5c17c20021be.png)
 
+![drczero](https://user-images.githubusercontent.com/68071764/218402486-4d37a7c5-c903-4abe-96e0-77d5db53c2cb.png)
 
+- go to File --> save and select autowrite.
+- Go to the command window and type the following:
+```
+extract do local
+extract all
+```
+- Extract do local is an instruction to perform all extractions to the local directory and extract all does the actual extraction. We want our extraction for lvs to be in the spice format, so run the following commands.
+```
+ext2spice lvs
+ext2spice
+``
+![extract commands](https://user-images.githubusercontent.com/68071764/218426473-a6cce187-49ec-41c4-ba7d-68cfab8d33a0.png)
+-  close magic.
+
+-Check the spice file to view the capacitances being included.
+
+![inv_spice](https://user-images.githubusercontent.com/68071764/218427006-eda35ec3-e97b-4503-a417-257ce128bd51.png)
 
 
 
