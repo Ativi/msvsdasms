@@ -281,15 +281,19 @@ Once your connections are done your schematic is ready.
 
 - go to File --> save and select autowrite.
 - Go to the command window and type the following:
+
 ```
 extract do local
 extract all
 ```
+
 - Extract do local is an instruction to perform all extractions to the local directory and extract all does the actual extraction. We want our extraction for lvs to be in the spice format, so run the following commands.
+
 ```
 ext2spice lvs
 ext2spice
 ``
+
 ![extract commands](https://user-images.githubusercontent.com/68071764/218426473-a6cce187-49ec-41c4-ba7d-68cfab8d33a0.png)
 -  close magic.
 
