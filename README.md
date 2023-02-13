@@ -301,6 +301,12 @@ ext2spice
 
 ![inv_spice](https://user-images.githubusercontent.com/68071764/218427006-eda35ec3-e97b-4503-a417-257ce128bd51.png)
 
+-The schematic netlist and layout netlist can be compared using LVS by netgen.
+```
+netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simulation/testbench.spice"
+```
+![lvs done](https://user-images.githubusercontent.com/68071764/218435409-c7ddb76a-8bd9-4634-a2f7-ae0b608210fa.png)
+
 
 
 
