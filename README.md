@@ -297,6 +297,62 @@ ext2spice
 ![extract commands](https://user-images.githubusercontent.com/68071764/218426473-a6cce187-49ec-41c4-ba7d-68cfab8d33a0.png)
 -  close magic.
 
+-Simulate the spice file extracted from magic after modifications.
+```
+* NGSPICE file created from inverter1.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_ATLS57 a_15_n200# a_n175_n374# a_n73_n200# a_n33_n288#
+X0 a_15_n200# a_n33_n288# a_n73_n200# a_n175_n374# sky130_fd_pr__nfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=150000u
+C0 a_15_n200# a_n73_n200# 0.32fF
+C1 a_n73_n200# a_n33_n288# 0.03fF
+C2 a_15_n200# a_n33_n288# 0.03fF
+C3 a_15_n200# a_n175_n374# 0.16fF
+C4 a_n73_n200# a_n175_n374# 0.21fF
+C5 a_n33_n288# a_n175_n374# 0.30fF
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_XGASDL a_n73_n400# a_15_n400# w_n211_n619# a_n33_n497#
++ VSUBS
+X0 a_15_n400# a_n33_n497# a_n73_n400# w_n211_n619# sky130_fd_pr__pfet_01v8 ad=1.16e+12p pd=8.58e+06u as=1.16e+12p ps=8.58e+06u w=4e+06u l=150000u
+C0 a_15_n400# w_n211_n619# 0.17fF
+C1 a_n73_n400# a_n33_n497# 0.04fF
+C2 a_n33_n497# w_n211_n619# 0.26fF
+C3 a_n73_n400# w_n211_n619# 0.27fF
+C4 a_15_n400# a_n33_n497# 0.04fF
+C5 a_n73_n400# a_15_n400# 0.64fF
+C6 a_15_n400# VSUBS 0.14fF
+C7 a_n73_n400# VSUBS 0.14fF
+C8 a_n33_n497# VSUBS 0.06fF
+C9 w_n211_n619# VSUBS 2.02fF
+.ends
+
+.subckt inverter1 vdd vss vin vout
+XXM1 vout VSUBS vss m1_504_60# sky130_fd_pr__nfet_01v8_ATLS57
+XXM2 vdd vout XM2/w_n211_n619# vin VSUBS sky130_fd_pr__pfet_01v8_XGASDL
+C0 m1_504_60# XM2/w_n211_n619# 0.01fF
+C1 m1_504_60# vdd 0.00fF
+C2 vdd XM2/w_n211_n619# 0.19fF
+C3 vss vin 0.03fF
+C4 vout vss 0.07fF
+C5 vout vin 0.02fF
+C6 m1_504_60# vss 0.05fF
+C7 m1_504_60# vin 0.01fF
+C8 vss XM2/w_n211_n619# 0.00fF
+C9 XM2/w_n211_n619# vin 0.11fF
+C10 m1_504_60# vout 0.01fF
+C11 vout XM2/w_n211_n619# 0.12fF
+C12 vdd vin 0.15fF
+C13 vout vdd 0.05fF
+C14 vin VSUBS 0.24fF
+C15 m1_504_60# VSUBS 0.28fF
+C16 vdd VSUBS 1.12fF
+C17 XM2/w_n211_n619# VSUBS 2.06fF
+C18 vout VSUBS 1.19fF
+C19 vss VSUBS 0.99fF
+.ends
+
+```
+
 -Check the spice file to view the capacitances being included.
 
 ![inv_spice](https://user-images.githubusercontent.com/68071764/218427006-eda35ec3-e97b-4503-a417-257ce128bd51.png)
