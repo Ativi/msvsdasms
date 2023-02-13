@@ -365,8 +365,13 @@ netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simula
 
 ![lcheck](https://user-images.githubusercontent.com/68071764/218447629-76933644-eafe-419d-8afb-4c4a731e4777.png)
 
+![display image](https://user-images.githubusercontent.com/68071764/218505076-85bef618-8848-4eff-a00e-13daf14d2a9a.png)
+![graph](https://user-images.githubusercontent.com/68071764/218505097-48afe1b1-b707-48ac-be9d-715ab3466ba4.png)
 
+![extended graph](https://user-images.githubusercontent.com/68071764/218505119-1fe127c7-1d9e-4294-9b7a-3baf2e8225c7.png)
 
+![values](https://user-images.githubusercontent.com/68071764/218505164-bd436eb0-db58-4998-9cd6-f47d3e19a56a.png)
+![0 9graph](https://user-images.githubusercontent.com/68071764/218505468-40b48b4d-f546-4cc9-8c08-bb863916fd2c.png)
 
 
 
