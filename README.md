@@ -292,7 +292,7 @@ extract all
 ```
 ext2spice lvs
 ext2spice
-``
+```
 
 ![extract commands](https://user-images.githubusercontent.com/68071764/218426473-a6cce187-49ec-41c4-ba7d-68cfab8d33a0.png)
 -  close magic.
