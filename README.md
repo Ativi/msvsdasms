@@ -1,4 +1,18 @@
 # msvsdasms
+
+Weekly AI's 
+
+|S. No. | Week 0 AI's |Status|
+|:---:| :---:| :---:| 
+|1.|Install Oracle virtual box with Ubuntu 20.04| Completed|
+|2.|Installation of Tools and SKY130 PDKs|Completed|
+|3.| Create inverter and perform pre-layout using xschem or ngspice|Completed|
+|4.|Inverter Post-layout characterization using ( step.2)|Completed|
+|5.| Enroll in FREE VSD-custom layout course|In-progress|
+|6.| Create the design shown in section 7 of the course and perform pre-layout using xschem or ngspice with general pdks|Completed|
+|7.| Post layout characterization using ngspice with general pdks|Completed|
+|8.| Update your findings on your GitHub repo with the title “Week 0”| Updated|
+
 ## Table of contents
 - <b>Week 0</b>
    1. Install Oracle virtual box with Ubuntu 22.04 LTS
