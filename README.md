@@ -13,6 +13,17 @@ Weekly AI's
 |7.| Post layout characterization using ngspice with general pdks|Completed|
 |8.| Update your findings on your GitHub repo with the title “Week 0”| Updated|
 
+|S. No. | Week 1 AI's |Status|
+|:---:| :---:| :---:| 
+|9.| Install ALIGN tool|Completed|
+|10.| Inverter post-layout characterization using (step.9)||
+|11.| Compare 10 and 4||
+|12.| Enroll in FREE VSD-custom layout course ||
+|13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS||
+|14.| Post layout characterization using magic/ngspice and SKY130 PDKs||
+|15.|Post layout characterization using ALIGN |
+|16.| Compare 14 and 15||
+|17.| Update your findings on your GitHub repo with the title “Week 1” ||
 ## Table of contents
 - <b>Week 0</b>
    1. Install Oracle virtual box with Ubuntu 22.04 LTS
