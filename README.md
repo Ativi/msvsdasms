@@ -353,11 +353,11 @@ C19 vss VSUBS 0.99fF
 
 ```
 
--Check the spice file to view the capacitances being included.
+- Check the spice file to view the capacitances being included.
 
 ![inv_spice](https://user-images.githubusercontent.com/68071764/218427006-eda35ec3-e97b-4503-a417-257ce128bd51.png)
 
--The schematic netlist and layout netlist can be compared using LVS by netgen.
+- The schematic netlist and layout netlist can be compared using LVS by netgen.
 ```
 netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simulation/testbench.spice"
 ```
@@ -366,6 +366,7 @@ netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simula
 ![lcheck](https://user-images.githubusercontent.com/68071764/218447629-76933644-eafe-419d-8afb-4c4a731e4777.png)
 
 ![display image](https://user-images.githubusercontent.com/68071764/218505076-85bef618-8848-4eff-a00e-13daf14d2a9a.png)
+- plot vout vs vin is generated as below :
 ![graph](https://user-images.githubusercontent.com/68071764/218505097-48afe1b1-b707-48ac-be9d-715ab3466ba4.png)
 
 ![extended graph](https://user-images.githubusercontent.com/68071764/218505119-1fe127c7-1d9e-4294-9b7a-3baf2e8225c7.png)
