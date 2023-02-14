@@ -399,7 +399,15 @@ netgen -batch lvs "../mag/inverter.spice inverter" "/home/ativi07/.xschem/simula
 ![values](https://user-images.githubusercontent.com/68071764/218505164-bd436eb0-db58-4998-9cd6-f47d3e19a56a.png)
 ![0 9graph](https://user-images.githubusercontent.com/68071764/218505468-40b48b4d-f546-4cc9-8c08-bb863916fd2c.png)
 
+The timing parameters are calculated as
 
+Rise time = time(80 % of Vout) - time(20% of Vout)
+
+Fall time = time(20 % of Vout) - time(80% of Vout)
+
+Cell Rise Delay =time taken by output to rise to its 50% value - time taken by the input to fall to its 50% value
+
+Cell Rise Delay =time taken by output to fall to its 50% value - time taken by the input to rise to its 50% value
 
 
 
