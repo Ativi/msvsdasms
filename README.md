@@ -421,15 +421,95 @@ cd build
 
 - NOTE!! ( The first path should be netlist directory)(Rename the spice file netlist with <b>.sp</b> instead of <b>.spice</b> tool understands .sp format)
 
-- Now run the design
+- Now run the design(location of your spice file and the pdk)
 ![align command](https://user-images.githubusercontent.com/68071764/219766476-fadae437-294d-47cc-831c-d684b61de55b.png)
 ![align run inverter](https://user-images.githubusercontent.com/68071764/219767811-00257d14-71a5-4007-a290-225a281a5d4d.png)
 
 - Generated .lef and .gds 
 - ![gds created](https://user-images.githubusercontent.com/68071764/219767974-463791db-cd18-40ed-99f5-affedb7bb9d8.png)
 
-- Now open .gds file using magic tool(Read GDS).
+- Now open .gds file using magic tool(Go to options and Read GDS).
 - ![gds_magic](https://user-images.githubusercontent.com/68071764/219768141-2efb6df9-a973-4947-8973-00d1f603a0b8.png)
+
+- GDS file loaded, Extract the netlist file.
+```
+extract do local
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+- New spice netlist will be created.
+ ```
+ * SPICE3 file created from INVERTER1_0.ext - technology: sky130A
+X0 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 ad=2.352e+11p pd=2.24e+06u as=4.452e+11p ps=4.42e+06u w=840000u l=150000u
+X1 VSS VIN VOUT VSS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X2 VOUT VIN INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# sky130_fd_pr__pfet_01v8 ad=2.352e+11p pd=2.24e+06u as=4.452e+11p ps=4.42e+06u w=840000u l=150000u
+X3 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VIN VOUT INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+C0 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VOUT 0.79fF
+C1 VIN VOUT 0.31fF
+C2 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VIN 1.14fF
+C3 VOUT VSS 0.69fF **FLOATING
+C4 VIN VSS 1.51fF **FLOATING
+C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VSS 3.02fF **FLOATING
+```
+- Merged the testbench netlist and the new generated netlist(Just keep one subckt there are two subckts)
+
+```
+** sch_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/testbench1.sch
+.subckt testbench1
+V1 in GND pulse(0 1.8 1n 1n 1n 4n 10n)
+.save i(v1)
+V2 net1 GND 1.8
+.save i(v2)
+x1 net1 in out GND inverter1
+**** begin user architecture code
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+.control
+save all
+tran 0.01n 40n
+plot v(in) v(out)
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  inverter1.sym # of pins=4
+** sym_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/inverter1.sym
+** sch_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/inverter1.sch
+.subckt inverter1 vdd vin vout vss
+*.iopin vdd
+*.iopin vss
+*.ipin vin
+*.opin vout
+XM1 vout vin vss vss sky130_fd_pr__nfet_01v8
+XM2 vout vin vdd vdd sky130_fd_pr__pfet_01v8
+.ends
+
+.GLOBAL GND
+.end
+
+* SPICE3 file created from INVERTER1_0.ext - technology: sky130A
+
+X0 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 ad=2.352e+11p pd=2.24e+06u as=4.452e+11p ps=4.42e+06u w=840000u l=150000u
+X1 VSS VIN VOUT VSS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+X2 VOUT VIN INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# sky130_fd_pr__pfet_01v8 ad=2.352e+11p pd=2.24e+06u as=4.452e+11p ps=4.42e+06u w=840000u l=150000u
+X3 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VIN VOUT INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
+C0 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VOUT 0.79fF
+C1 VIN VOUT 0.31fF
+C2 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VIN 1.14fF
+C3 VOUT VSS 0.69fF **FLOATING
+C4 VIN VSS 1.51fF **FLOATING
+C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w_0_0# VSS 3.02fF**FLOATING
+```
+  - Run the updated spice netlist(the extracted netlist which you get from magic does not contain the control statements(plots, sources, etc). It's just a bare subckt(black box or an IC). You must add the .control statements(power it) by pasting them from the pre-layout and get a similar results.
+  - ![align post output](https://user-images.githubusercontent.com/68071764/219775960-a36a1de2-5718-4e9a-adf6-89d3193363e5.png)
+![graph postlayout of align](https://user-images.githubusercontent.com/68071764/219776057-233a49da-abaf-46a1-ad96-88e3f8de4065.png)
+
+
 
 
 
