@@ -558,16 +558,21 @@ V6 f 0 0 pulse 0 2.5 0.6n 10p 10p 1n 2n
 ```
 
 - Run the ngspice simulation
+
 ```
-    $ngspice fn_prelayout.spice
-```    
+$ngspice fn_prelayout.spice
+```   
+```
  ngspice 2 -> run
  ngspice 3 -> setplot
 ```
 
 ![ng_spice fn_prelayout](https://user-images.githubusercontent.com/68071764/219788259-28f9a16c-3f78-4784-99d3-5d847e5604da.png)
+
 ![ng_fn_prelayout](https://user-images.githubusercontent.com/68071764/219788266-25595ef5-3fd7-4266-bbc1-1de35d83acd3.png)
+
 ![ngspice_fn_pre-output](https://user-images.githubusercontent.com/68071764/219788313-228e70ba-3e20-4af9-b7ca-74a1f428f768.png)
+
 ![rise and fall pre_layout](https://user-images.githubusercontent.com/68071764/219788325-f4b76534-131e-4353-b387-fbbbbd22b7b2.png)
 
 ## Post-layout simulation of a function Fn using Magic
