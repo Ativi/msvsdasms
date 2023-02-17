@@ -509,13 +509,138 @@ C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w
   - ![align post output](https://user-images.githubusercontent.com/68071764/219775960-a36a1de2-5718-4e9a-adf6-89d3193363e5.png)
 ![graph postlayout of align](https://user-images.githubusercontent.com/68071764/219776057-233a49da-abaf-46a1-ad96-88e3f8de4065.png)
 
+## Pre-layout simulation of a function Fn using ngspice
+
+- Implement the following circuit using CMOS logic design style
+- ![art_layout](https://user-images.githubusercontent.com/68071764/219786913-07540b10-5ccd-4e5e-b70c-5840d3a57cc3.png)
+
+- The netlist ```fn_prelayout.spice``` for the function Fn given can be written as 
+```
+***Netlist description for prelayout simulation***
+M1 3 a vdd vdd pmos W=2.125u L=0.25u
+M2 2 b vdd vdd pmos W=2.125u L=0.25u
+M3 4 d 2 2 pmos W=2.125u L=0.25u
+M4 4 c 3 3 pmos W=2.125u L=0.25u
+M5 out e 4 4 pmos W=2.125u L=0.25u
+M6 out f 4 4 pmos W=2.125u L=0.25u
+
+M7 out a 6 6 nmos W=2.125u L=0.25u
+M8 out c 6 6 nmos W=2.125u L=0.25u
+M9 out e 7 7 nmos W=2.125u L=0.25u
+M10 6 b 0 0 nmos W=2.125u L=0.25u
+M11 6 d 0 0 nmos W=2.125u L=0.25u
+M12 7 f 0 0 nmos W=2.125u L=0.25u
+
+cload out 0 10f
+
+Vdd vdd 0 2.5
+V1 a 0 0 pulse 0 2.5 0.1n 10p 10p 1n 2n
+V2 b 0 0 pulse 0 2.5 0.2n 10p 10p 1n 2n
+V3 c 0 0 pulse 0 2.5 0.3n 10p 10p 1n 2n
+V4 d 0 0 pulse 0 2.5 0.4n 10p 10p 1n 2n
+V5 e 0 0 pulse 0 2.5 0.5n 10p 10p 1n 2n
+V6 f 0 0 pulse 0 2.5 0.6n 10p 10p 1n 2n
+
+***Simulation commands***
+.op
+.tran 10p 4n
+
+*** .include model file ***
+.include my_model_file.tech
+.end
+```
+
+- To measure Rise and Fall time of the output, following lines are added to the fn_prelayout.spice netlist.
+```
+.MEAS TRAN rise_time TRIG V(out) VAL=0.25 RISE=1 TARG V(out) VAL=2.25 RISE=1
+.MEAS TRAN FALL_time TRIG V(out) VAL=2.25 FALL=1 TARG V(out) VAL=0.25 FALL=1
+.save all
+```
+
+- Run the ngspice simulation
+```
+    $ngspice fn_prelayout.spice
+```    
+ ngspice 2 -> run
+ ngspice 3 -> setplot
+```
+
+![ng_spice fn_prelayout](https://user-images.githubusercontent.com/68071764/219788259-28f9a16c-3f78-4784-99d3-5d847e5604da.png)
+![ng_fn_prelayout](https://user-images.githubusercontent.com/68071764/219788266-25595ef5-3fd7-4266-bbc1-1de35d83acd3.png)
+![ngspice_fn_pre-output](https://user-images.githubusercontent.com/68071764/219788313-228e70ba-3e20-4af9-b7ca-74a1f428f768.png)
+![rise and fall pre_layout](https://user-images.githubusercontent.com/68071764/219788325-f4b76534-131e-4353-b387-fbbbbd22b7b2.png)
+
+## Post-layout simulation of a function Fn using Magic
+
+- Layout of function Fn is created in Magic with the help of Euler path and stick diagram.
+![post layout mag](https://user-images.githubusercontent.com/68071764/219789069-2ec0018a-c112-43b9-b787-7e50cf0048c0.png)
+
+- Extract the netlist from magic layout
+ ```
+extract do local
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+- The netlist ```fn_postlayout.spice``` generated is as shown. The netlist shows the parasitic capacitances also. Model file is same as the one used for pre-layout simulation. 
+```
+* SPICE3 file created from Fn_.ext - technology: min2
+
+.option scale=0.09u
+
+M1000 a_46_38# d a_22_38# vdd pmos w=17 l=2
++  ad=102 pd=46 as=204 ps=92
+M1001 out c a_14_9# gnd nmos w=17 l=2
++  ad=204 pd=92 as=204 ps=92
+M1002 vdd b a_46_38# vdd pmos w=17 l=2
++  ad=204 pd=92 as=0 ps=0
+M1003 gnd f a_30_9# gnd nmos w=17 l=2
++  ad=204 pd=92 as=102 ps=46
+M1004 gnd b a_14_9# gnd nmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 out e a_22_38# vdd pmos w=17 l=2
++  ad=102 pd=46 as=0 ps=0
+M1006 a_14_38# a vdd vdd pmos w=17 l=2
++  ad=102 pd=46 as=0 ps=0
+M1007 a_14_9# a out gnd nmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 a_30_9# e out gnd nmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_22_38# f out vdd pmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 a_22_38# c a_14_38# vdd pmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 a_14_9# d gnd gnd nmos w=17 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 a_30_9# gnd 3.37fF
+C1 a_14_9# gnd 6.82fF
+C2 out gnd 8.40fF
+C3 a_22_38# gnd 3.02fF
+C4 vdd gnd 9.58fF
 
 
+Vdd vdd 0 2.5
+V1 a 0 0 pulse 0 2.5 0.1n 10p 10p 1n 2n
+V2 b 0 0 pulse 0 2.5 0.2n 10p 10p 1n 2n
+V3 c 0 0 pulse 0 2.5 0.3n 10p 10p 1n 2n
+V4 d 0 0 pulse 0 2.5 0.4n 10p 10p 1n 2n
+V5 e 0 0 pulse 0 2.5 0.5n 10p 10p 1n 2n
+V6 f 0 0 pulse 0 2.5 0.6n 10p 10p 1n 2n
+***Simulation commands***
+.op
+.tran 10p 4n
 
+```
 
+- Run the ngspice simulation. 
 
-
-
-
+```
+    $ngspice fn_prelayout.spice
+```    
+ ngspice 2 -> run
+ ngspice 3 -> setplot
+ ```
+ ![post_layout custom](https://user-images.githubusercontent.com/68071764/219789771-0891073d-f57e-4f3a-a1f6-cbae63e2a6d4.png)
 
 
