@@ -643,4 +643,7 @@ V6 f 0 0 pulse 0 2.5 0.6n 10p 10p 1n 2n
  ```
  ![post_layout custom](https://user-images.githubusercontent.com/68071764/219789771-0891073d-f57e-4f3a-a1f6-cbae63e2a6d4.png)
 
-
+- Comparison of Pre-layout and post-layout timing parameters of a function Fn
+ 
+ Rise Time-
+ Fall Time- 
