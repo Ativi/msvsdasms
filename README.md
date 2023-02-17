@@ -4,11 +4,11 @@ Weekly AI's
 
 |S. No. | Week 0 AI's |Status|
 |:---:| :---:| :---:| 
-|1.|Install Oracle virtual box with Ubuntu 20.04| Completed|
-|2.|Installation of Tools and SKY130 PDKs|Completed|
+|1.| Install Oracle virtual box with Ubuntu 20.04| Completed|
+|2.| Installation of Tools and SKY130 PDKs|Completed|
 |3.| Create inverter and perform pre-layout using xschem or ngspice|Completed|
-|4.|Inverter Post-layout characterization using ( step.2)|Completed|
-|5.| Enroll in FREE VSD-custom layout course|In-progress|
+|4.| Inverter Post-layout characterization using ( step.2)|Completed|
+|5.| Enroll in FREE VSD-custom layout course|completed|
 |6.| Create the design shown in section 7 of the course and perform pre-layout using xschem or ngspice with general pdks|Completed|
 |7.| Post layout characterization using ngspice with general pdks|Completed|
 |8.| Update your findings on your GitHub repo with the title “Week 0”| Updated|
@@ -16,9 +16,9 @@ Weekly AI's
 |S. No. | Week 1 AI's |Status|
 |:---:| :---:| :---:| 
 |9.| Install ALIGN tool|Completed|
-|10.| Inverter post-layout characterization using (step.9)||
+|10.| Inverter post-layout characterization using (step.9)|completed|
 |11.| Compare 10 and 4||
-|12.| Enroll in FREE VSD-custom layout course ||
+|12.| Enroll in FREE VSD-custom layout course |completed|
 |13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS||
 |14.| Post layout characterization using magic/ngspice and SKY130 PDKs||
 |15.|Post layout characterization using ALIGN |
@@ -34,7 +34,7 @@ Weekly AI's
       - Xschem
       - Open_pdks
       - Align Tool
-   3. Lab - Creating an inverter schematic in Xschem
+   3. Create inverter and perform pre-layout using xschem or ngspice
       - Creation of Layout using inverter schematic in layout tool MAGIC
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
