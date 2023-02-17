@@ -19,23 +19,13 @@ Weekly AI's
 |10.| Inverter post-layout characterization using (step.9)|completed|
 |11.| Compare 10 and 4||
 |12.| Enroll in FREE VSD-custom layout course |completed|
-|13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS||
+|13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS|In progress|
 |14.| Post layout characterization using magic/ngspice and SKY130 PDKs||
 |15.|Post layout characterization using ALIGN |
 |16.| Compare 14 and 15||
-|17.| Update your findings on your GitHub repo with the title “Week 1” ||
-## Table of contents
-- <b>Week 0</b>
-   1. Install Oracle virtual box with Ubuntu 22.04 LTS
-   2. Installation of Tools and SKY130 PDKs
-      - Magic
-      - Netgen
-      - Ngspice
-      - Xschem
-      - Open_pdks
-      - Align Tool
-   3. Create inverter and perform pre-layout using xschem or ngspice
-      - Creation of Layout using inverter schematic in layout tool MAGIC
+|17.| Update your findings on your GitHub repo with the title “Week 1” |In progress|
+      
+# WEEK 0 AI's
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
 
@@ -61,7 +51,7 @@ $  sudo make install
 
 More info can be found at http://opencircuitdesign.com/magic/index.html
 
--To check for the functionality of the tool: Type Magic
+- To check for the functionality of the tool: Type Magic
 
 ![magic ](https://user-images.githubusercontent.com/68071764/218156955-1b4ae709-8cfd-493d-92c9-ca8e9f6152c8.png)
 
@@ -159,9 +149,7 @@ $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 ```
 
 
-
-
-### Creating an inverter schematic in Xschem
+## Creating an inverter schematic in Xschem
 
 - Open xschem and after resizing the window to your comfort, open a new schematic from the file menu and press the insert key.
 - Go over to the sky130 directory and select the skky130_fd_pr option for primitive cells, since we need nfet and pfet to build our inverter.
@@ -206,12 +194,12 @@ Once your connections are done your schematic is ready.
 
 ![inv_tbsch](https://user-images.githubusercontent.com/68071764/218172045-c57b4665-41ac-46f2-818e-cf8f904a743c.png)
 
--Simulating the testbench
+- Simulating the testbench
 
 ![simulation](https://user-images.githubusercontent.com/68071764/218276575-657e42e4-8aed-4b1f-8dc3-109cdeedfb44.png)
 ![graph1](https://user-images.githubusercontent.com/68071764/218276579-459dd06f-ea8a-4534-b173-b02e234e4dc2.png)
 
-- we have verified the working of our inverter schematic and we need a netist of exclusively that, and not our entire testbench. Open the inverter from the files menu and go to suimulation menu and select "LVS netlist: top lvl is a subsckt" and then tap netlist. Exit xschem.
+- we have verified the working of our inverter schematic and we need a netist of exclusively that, and not our entire testbench. Open the inverter from the files menu and go to suimulation menu and select<b> "LVS netlist: top lvl is a subsckt" </b>and then tap netlist. Exit xschem.
 
 - we need to import the netlist to magic to create the layout. Open magic by moving to the mag directory and using magic -T sky130A.Tech. Go to file --> Import SPICE and select our netlist from the .xschem/simulation folder.
 
@@ -332,7 +320,7 @@ Cell Rise Delay =time taken by output to rise to its 50% value - time taken by t
 
 Cell Rise Delay =time taken by output to fall to its 50% value - time taken by the input to rise to its 50% value
 
-##Week 1 AI's
+# Week 1 AI's
 
 ### ALIGN TOOL
 
@@ -380,7 +368,7 @@ pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TES
 
 ```
 
-##### Making ALIGN Portable to Sky130 tehnology
+### Making ALIGN Portable to Sky130 tehnology
 
 - Clone the following Repository inside ALIGN-public directory.
 ```
@@ -412,4 +400,42 @@ EXAMPLE:
 schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
 
 ![schematic example](https://user-images.githubusercontent.com/68071764/218166479-44909a20-9ed1-43e2-8de3-3b7db150f814.png)
+
+FLOW 
+
+- Create a python virtualenv
+```
+python -m venv general
+source general/bin/activate
+python -m pip install pip --upgrade
+mkdir build
+cd build
+```
+
+- Running Design(use your original inverter spice file generated from xschem as input)
+  ![image](https://user-images.githubusercontent.com/68071764/219765567-dbbd47e1-6e08-4924-af06-d90ad0add687.png)
+- Once you run this netlist, below error will be pop up
+  ![image](https://user-images.githubusercontent.com/68071764/219765812-bd5c7dc3-0329-4cef-9ceb-732ee6dd62cf.png)
+- Make changes as per error, in my case:
+![image](https://user-images.githubusercontent.com/68071764/219766105-8560b034-0c2c-4d3a-ad63-6c760a81249f.png)
+
+- NOTE!! ( The first path should be netlist directory)(Rename the spice file netlist with <b>.sp</b> instead of <b>.spice</b> tool understands .sp format)
+
+- Now run the design
+![align command](https://user-images.githubusercontent.com/68071764/219766476-fadae437-294d-47cc-831c-d684b61de55b.png)
+![align run inverter](https://user-images.githubusercontent.com/68071764/219767811-00257d14-71a5-4007-a290-225a281a5d4d.png)
+
+- Generated .lef and .gds 
+- ![gds created](https://user-images.githubusercontent.com/68071764/219767974-463791db-cd18-40ed-99f5-affedb7bb9d8.png)
+
+- Now open .gds file using magic tool(Read GDS).
+- ![gds_magic](https://user-images.githubusercontent.com/68071764/219768141-2efb6df9-a973-4947-8973-00d1f603a0b8.png)
+
+
+
+
+
+
+
+
 
