@@ -681,5 +681,13 @@ C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w
 6. Now, just to get a working layout. Select cells by hovering over them and pressing i. Move them to a new location by hovering over the point you want the bottom left corner of the cell to be and pressing m. Once you move the cells around you should have a layout like this. 
 ![my_layout](https://user-images.githubusercontent.com/68071764/220572928-b365a45c-5ad5-4367-90d3-520b721ce90c.png)
 
-![post_layout function output](https://user-images.githubusercontent.com/68071764/220572973-dc637bd8-d6fc-4d77-886d-633b70bbef85.png)
+![postlay1](https://user-images.githubusercontent.com/68071764/220605618-1e937a33-e2ba-460f-91fb-91603c35f740.png)
+
+![post_layout output of function](https://user-images.githubusercontent.com/68071764/220605703-5507eefc-446a-4906-920c-25081f7a1d11.png)
+
+![post_layout output waveform function](https://user-images.githubusercontent.com/68071764/220605775-6477fa8a-9563-4097-a042-e79cae729d89.png)
+
+
+
+
 
