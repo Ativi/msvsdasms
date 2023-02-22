@@ -24,7 +24,11 @@ Weekly AI's
 |15.|Post layout characterization using ALIGN |In progress|
 |16.| Compare 14 and 15|In progress|
 |17.| Update your findings on your GitHub repo with the title “Week 1” |In progress|
-      
+     
+|S. No. | Week 2 AI's |Status|    
+|18.| Install Klayout| |
+|19.|||
+     
 # WEEK 0 AI's
 
 ###  Install Oracle virtual box with Ubuntu 22.04 LTS
