@@ -21,13 +21,14 @@ Weekly AI's
 |12.| Enroll in FREE VSD-custom layout course |completed|
 |13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS|Completed|
 |14.| Post layout characterization using magic/ngspice and SKY130 PDKs|completed|
-|15.|Post layout characterization using ALIGN |In progress|
-|16.| Compare 14 and 15|In progress|
-|17.| Update your findings on your GitHub repo with the title “Week 1” |In progress|
+|15.|Post layout characterization using ALIGN |completed|
+|16.| Compare 14 and 15|completed|
+|17.| Update your findings on your GitHub repo with the title “Week 1” |completed|
      
-|S. No. | Week 2 AI's |Status|    
-|18.| Install Klayout| |
-|19.|||
+|S. No. | Week 2 AI's |Status| 
+|:---:| :---:| :---:|
+|18.| Install Klayout|completed |
+
      
 # WEEK 0 AI's
 
