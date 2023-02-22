@@ -1143,6 +1143,8 @@ cd build
 
 - Now open .gds file using magic tool(Go to options and Read GDS).
 
+![gds output](https://user-images.githubusercontent.com/68071764/220631655-76212d9b-60f8-4533-b3b9-980554c6919a.png)
 
+- GDS file loaded, Extract the netlist file.
 
 
