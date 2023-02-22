@@ -670,6 +670,100 @@ C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w
 ![output final](https://user-images.githubusercontent.com/68071764/220572054-d09e7ba7-ad74-4453-ac58-40c673ebb575.png)
 ![wave_output](https://user-images.githubusercontent.com/68071764/220572108-92e23891-821c-4fb7-ae1e-cd25ba265e5d.png)
 
+ ### PreNetlist:
+ 
+ ```
+ ** sch_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/function_testbench.sch
+**.subckt function_testbench A B C D E F Fn
+*.ipin A
+*.ipin B
+*.ipin C
+*.ipin D
+*.ipin E
+*.ipin F
+*.opin Fn
+x1 VDD B A C D E F Fn GND function
+V1 A GND pulse(0 1.8 0.1n 10p 10p 1n 2n)
+.save i(v1)
+V2 B GND pulse(0 1.8 0.2n 10p 10p 1n 2n)
+.save i(v2)
+V3 C GND pulse(0 1.8 0.3n 10p 10p 1n 2n)
+.save i(v3)
+V4 D GND pulse(0 1.8 0.4n 10p 10p 1n 2n)
+.save i(v4)
+V5 E GND pulse(0 1.8 0.5n 10p 10p 1n 2n)
+.save i(v5)
+V6 F GND pulse(0 1.8 0.6n 10p 10p 1n 2n)
+.save i(v6)
+V7 VDD GND 1.8
+.save i(v7)
+**** begin user architecture code
+
+
+.tran 10p 4n
+.save all
+
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  function.sym # of pins=9
+** sym_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/function.sym
+** sch_path: /home/ativi07/Desktop/ALIGN-public/week0/inverter/xschem/function.sch
+.subckt function vp B A C D E F Fn vn
+*.ipin A
+*.ipin C
+*.ipin E
+*.ipin F
+*.ipin D
+*.ipin B
+*.opin Fn
+*.ipin vp
+*.ipin vn
+XM1 net2 A vp vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 B vp vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net1 D net3 vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 C net2 vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Fn F net1 vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 Fn E net1 vp sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 Fn A net4 vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 net4 B vn vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM9 Fn C net4 vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM10 Fn E net5 vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM11 net4 D vn vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM12 net6 F vn vn sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
+```
 3. we have verified the working of our inverter schematic and we need a netist of exclusively that, and not our entire testbench. Open the inverter from the files menu and go to suimulation menu and select "LVS netlist: top lvl is a subsckt" and then tap netlist. Exit xschem. 
 
 4. we need to import the netlist to magic to create the layout. Open magic by moving to the mag directory and using magic -T sky130A.Tech. Go to file --> Import SPICE and select our netlist from the .xschem/simulation folder.
@@ -688,6 +782,330 @@ C5 INV_40258334_0_0_1676456961_0/PMOS_S_17800817_X1_Y1_1676456962_1676456961_0/w
 ![post_layout output waveform function](https://user-images.githubusercontent.com/68071764/220605775-6477fa8a-9563-4097-a042-e79cae729d89.png)
 
 
+### PostNetlist
+```
+* SPICE3 file created from function.ext - technology: sky130A
 
+.subckt function vp B A C D E F vn
+X0 vn m1_3860_n1652# m1_3134_n1514# VSUBS sky130_fd_pr__nfet_01v8 ad=8.7e+11p pd=7.74e+06u as=5.8e+11p ps=5.16e+06u w=1e+06u l=150000u
+X1 vp m1_n336_50# m1_n668_n500# XM1/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=5.16e+06u as=5.8e+11p ps=5.16e+06u w=1e+06u l=150000u
+X2 m1_630_n148# m1_540_40# vp XM2/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=5.16e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 m1_1514_n134# m1_1416_60# m1_n668_n500# XM3/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=1.16e+12p pd=1.032e+07u as=0p ps=0u w=1e+06u l=150000u
+X4 m1_630_n148# m1_2182_64# m1_1514_n134# XM4/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X5 m1_1514_n134# m1_3050_20# m1_n654_n1596# XM5/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=5.8e+11p ps=5.16e+06u w=1e+06u l=150000u
+X6 m1_n654_n1596# m1_3852_24# m1_1514_n134# XM6/w_n211_n319# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X7 m1_n246_n1566# m1_n342_n1718# m1_n654_n1596# VSUBS sky130_fd_pr__nfet_01v8 ad=1.16e+12p pd=1.032e+07u as=8.7e+11p ps=7.74e+06u w=1e+06u l=150000u
+X8 vn m1_536_n1694# m1_n246_n1566# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X9 m1_n246_n1566# m1_1402_n1672# m1_n654_n1596# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X10 vn m1_2210_n1670# m1_n246_n1566# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X11 m1_3134_n1514# m1_3034_n1672# m1_n654_n1596# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+C0 m1_n668_n500# m1_1514_n134# 0.16fF
+C1 B m1_1402_n1672# 0.00fF
+C2 m1_3860_n1652# F 0.08fF
+C3 m1_n336_50# m1_n246_n1566# 0.00fF
+C4 m1_3852_24# F 0.06fF
+C5 E m1_2210_n1670# 0.00fF
+C6 D m1_3034_n1672# 0.00fF
+C7 m1_n668_n500# m1_n336_50# 0.06fF
+C8 vn XM6/w_n211_n319# 0.00fF
+C9 XM5/w_n211_n319# C 0.00fF
+C10 m1_3134_n1514# m1_n654_n1596# 0.18fF
+C11 XM3/w_n211_n319# m1_630_n148# 0.11fF
+C12 m1_3050_20# XM4/w_n211_n319# 0.00fF
+C13 F m1_n654_n1596# 0.38fF
+C14 XM3/w_n211_n319# XM1/w_n211_n319# 0.00fF
+C15 m1_3852_24# m1_1514_n134# 0.04fF
+C16 m1_n246_n1566# vp 0.00fF
+C17 A m1_n654_n1596# 0.41fF
+C18 B XM4/w_n211_n319# 0.00fF
+C19 D vn 0.10fF
+C20 vn m1_n246_n1566# 1.20fF
+C21 m1_n668_n500# vp 0.31fF
+C22 m1_2182_64# XM3/w_n211_n319# 0.01fF
+C23 m1_3860_n1652# m1_3034_n1672# 0.01fF
+C24 XM5/w_n211_n319# XM6/w_n211_n319# 0.04fF
+C25 m1_630_n148# F 0.00fF
+C26 m1_1514_n134# m1_n654_n1596# 0.53fF
+C27 XM3/w_n211_n319# XM2/w_n211_n319# 0.03fF
+C28 m1_2210_n1670# m1_1402_n1672# 0.01fF
+C29 m1_n336_50# m1_n654_n1596# 0.00fF
+C30 m1_1416_60# XM3/w_n211_n319# 0.35fF
+C31 m1_630_n148# A 0.00fF
+C32 C m1_536_n1694# 0.00fF
+C33 m1_3034_n1672# m1_n654_n1596# 0.04fF
+C34 m1_540_40# XM3/w_n211_n319# 0.00fF
+C35 m1_3860_n1652# vn 0.05fF
+C36 XM1/w_n211_n319# A 0.05fF
+C37 E XM3/w_n211_n319# 0.00fF
+C38 D XM5/w_n211_n319# 0.01fF
+C39 m1_630_n148# m1_1514_n134# 1.24fF
+C40 m1_n336_50# m1_630_n148# 0.00fF
+C41 m1_2210_n1670# XM4/w_n211_n319# 0.00fF
+C42 vn m1_n654_n1596# 0.16fF
+C43 E m1_3134_n1514# 0.11fF
+C44 XM2/w_n211_n319# A 0.01fF
+C45 m1_n336_50# XM1/w_n211_n319# 0.32fF
+C46 m1_2182_64# m1_1514_n134# 0.06fF
+C47 m1_3050_20# XM3/w_n211_n319# 0.00fF
+C48 E F 0.11fF
+C49 XM5/w_n211_n319# m1_3852_24# 0.01fF
+C50 m1_540_40# A 0.00fF
+C51 XM3/w_n211_n319# B 0.00fF
+C52 XM2/w_n211_n319# m1_1514_n134# 0.00fF
+C53 m1_630_n148# vp 0.16fF
+C54 vn m1_630_n148# 0.00fF
+C55 XM3/w_n211_n319# m1_1402_n1672# 0.00fF
+C56 m1_1416_60# m1_1514_n134# 0.04fF
+C57 m1_n336_50# XM2/w_n211_n319# 0.00fF
+C58 m1_n246_n1566# m1_536_n1694# 0.04fF
+C59 XM1/w_n211_n319# vp 0.16fF
+C60 m1_n668_n500# m1_536_n1694# 0.00fF
+C61 m1_540_40# m1_1514_n134# 0.00fF
+C62 m1_3050_20# m1_3134_n1514# 0.00fF
+C63 XM5/w_n211_n319# m1_n654_n1596# 0.28fF
+C64 E m1_1514_n134# 0.05fF
+C65 m1_n342_n1718# A 0.06fF
+C66 m1_540_40# m1_n336_50# 0.00fF
+C67 m1_3050_20# F 0.00fF
+C68 E m1_3034_n1672# 0.07fF
+C69 XM3/w_n211_n319# XM4/w_n211_n319# 0.04fF
+C70 XM2/w_n211_n319# vp 0.18fF
+C71 vn XM2/w_n211_n319# 0.00fF
+C72 XM5/w_n211_n319# m1_630_n148# 0.01fF
+C73 A B 0.08fF
+C74 m1_1416_60# vp 0.00fF
+C75 m1_n336_50# m1_n342_n1718# 0.00fF
+C76 m1_3050_20# m1_1514_n134# 0.05fF
+C77 m1_540_40# vp 0.04fF
+C78 m1_540_40# vn 0.00fF
+C79 D C 0.13fF
+C80 C m1_n246_n1566# 0.12fF
+C81 E vn 0.00fF
+C82 B m1_1514_n134# 0.00fF
+C83 m1_n668_n500# C 0.09fF
+C84 m1_536_n1694# m1_n654_n1596# 0.01fF
+C85 m1_3050_20# m1_3034_n1672# 0.00fF
+C86 m1_2182_64# XM5/w_n211_n319# 0.00fF
+C87 m1_n336_50# B 0.00fF
+C88 F XM4/w_n211_n319# 0.00fF
+C89 m1_2210_n1670# m1_3134_n1514# 0.00fF
+C90 vn m1_n342_n1718# 0.00fF
+C91 XM5/w_n211_n319# m1_1416_60# 0.00fF
+C92 D XM6/w_n211_n319# 0.00fF
+C93 XM4/w_n211_n319# m1_1514_n134# 0.34fF
+C94 vp B 0.10fF
+C95 E XM5/w_n211_n319# 0.05fF
+C96 vn B 0.05fF
+C97 vn m1_1402_n1672# 0.02fF
+C98 C m1_n654_n1596# 0.43fF
+C99 D m1_n246_n1566# 0.06fF
+C100 m1_n668_n500# m1_n246_n1566# 0.00fF
+C101 m1_n668_n500# D 0.00fF
+C102 m1_2210_n1670# m1_3034_n1672# 0.00fF
+C103 m1_3860_n1652# XM6/w_n211_n319# 0.00fF
+C104 XM6/w_n211_n319# m1_3852_24# 0.32fF
+C105 XM2/w_n211_n319# m1_536_n1694# 0.00fF
+C106 XM5/w_n211_n319# m1_3050_20# 0.34fF
+C107 vn XM4/w_n211_n319# 0.00fF
+C108 C m1_630_n148# 0.02fF
+C109 m1_540_40# m1_536_n1694# 0.00fF
+C110 XM6/w_n211_n319# m1_n654_n1596# 0.26fF
+C111 C XM1/w_n211_n319# 0.00fF
+C112 m1_2210_n1670# vn 0.05fF
+C113 XM3/w_n211_n319# A 0.00fF
+C114 m1_2182_64# C 0.00fF
+C115 m1_n342_n1718# m1_536_n1694# 0.00fF
+C116 m1_630_n148# XM6/w_n211_n319# 0.00fF
+C117 D m1_n654_n1596# 0.41fF
+C118 m1_n246_n1566# m1_n654_n1596# 0.38fF
+C119 F m1_3134_n1514# 0.05fF
+C120 C XM2/w_n211_n319# 0.01fF
+C121 XM5/w_n211_n319# XM4/w_n211_n319# 0.02fF
+C122 XM3/w_n211_n319# m1_1514_n134# 0.14fF
+C123 m1_n668_n500# m1_n654_n1596# 0.38fF
+C124 m1_1416_60# C 0.07fF
+C125 m1_n336_50# XM3/w_n211_n319# 0.00fF
+C126 B m1_536_n1694# 0.07fF
+C127 m1_3860_n1652# m1_3852_24# 0.00fF
+C128 m1_540_40# C 0.00fF
+C129 m1_1402_n1672# m1_536_n1694# 0.00fF
+C130 E C 0.00fF
+C131 m1_2182_64# XM6/w_n211_n319# 0.00fF
+C132 D m1_630_n148# 0.14fF
+C133 m1_n668_n500# m1_630_n148# 0.07fF
+C134 m1_3860_n1652# m1_n654_n1596# 0.00fF
+C135 m1_3852_24# m1_n654_n1596# 0.05fF
+C136 F m1_1514_n134# 0.05fF
+C137 XM1/w_n211_n319# m1_n246_n1566# 0.00fF
+C138 XM3/w_n211_n319# vp 0.00fF
+C139 m1_3034_n1672# m1_3134_n1514# 0.03fF
+C140 vn XM3/w_n211_n319# 0.00fF
+C141 m1_n668_n500# XM1/w_n211_n319# 0.35fF
+C142 F m1_3034_n1672# 0.00fF
+C143 m1_2182_64# m1_n246_n1566# 0.00fF
+C144 D m1_2182_64# 0.06fF
+C145 C m1_3050_20# 0.00fF
+C146 m1_n336_50# A 0.06fF
+C147 E XM6/w_n211_n319# 0.01fF
+C148 m1_n668_n500# m1_2182_64# 0.00fF
+C149 m1_630_n148# m1_3852_24# 0.00fF
+C150 C B 0.06fF
+C151 D XM2/w_n211_n319# 0.00fF
+C152 C m1_1402_n1672# 0.07fF
+C153 vn m1_3134_n1514# 0.24fF
+C154 m1_n668_n500# XM2/w_n211_n319# 0.22fF
+C155 m1_1416_60# m1_n246_n1566# 0.00fF
+C156 D m1_1416_60# 0.00fF
+C157 m1_n668_n500# m1_1416_60# 0.04fF
+C158 vn F 0.08fF
+C159 D m1_540_40# 0.00fF
+C160 XM5/w_n211_n319# XM3/w_n211_n319# 0.00fF
+C161 m1_630_n148# m1_n654_n1596# 0.06fF
+C162 E D 0.09fF
+C163 vp A 0.06fF
+C164 m1_n668_n500# m1_540_40# 0.03fF
+C165 vn A 0.00fF
+C166 m1_3050_20# XM6/w_n211_n319# 0.00fF
+C167 XM1/w_n211_n319# m1_n654_n1596# 0.00fF
+C168 C XM4/w_n211_n319# 0.01fF
+C169 vp m1_1514_n134# 0.00fF
+C170 m1_n342_n1718# m1_n246_n1566# 0.04fF
+C171 XM5/w_n211_n319# m1_3134_n1514# 0.00fF
+C172 m1_2182_64# m1_n654_n1596# 0.02fF
+C173 m1_n668_n500# m1_n342_n1718# 0.00fF
+C174 m1_n336_50# vp 0.04fF
+C175 m1_2210_n1670# C 0.00fF
+C176 D m1_3050_20# 0.00fF
+C177 XM5/w_n211_n319# F 0.01fF
+C178 E m1_3860_n1652# 0.00fF
+C179 vn m1_3034_n1672# 0.02fF
+C180 E m1_3852_24# 0.00fF
+C181 XM2/w_n211_n319# m1_n654_n1596# 0.01fF
+C182 m1_630_n148# XM1/w_n211_n319# 0.00fF
+C183 m1_n246_n1566# B 0.11fF
+C184 m1_1416_60# m1_n654_n1596# 0.01fF
+C185 D m1_1402_n1672# 0.00fF
+C186 m1_n668_n500# B 0.08fF
+C187 m1_n246_n1566# m1_1402_n1672# 0.04fF
+C188 m1_2182_64# m1_630_n148# 0.03fF
+C189 m1_540_40# m1_n654_n1596# 0.00fF
+C190 XM6/w_n211_n319# XM4/w_n211_n319# 0.00fF
+C191 m1_n668_n500# m1_1402_n1672# 0.00fF
+C192 E m1_n654_n1596# 0.46fF
+C193 XM5/w_n211_n319# m1_1514_n134# 0.28fF
+C194 m1_630_n148# XM2/w_n211_n319# 0.13fF
+C195 m1_3050_20# m1_3852_24# 0.01fF
+C196 m1_1416_60# m1_630_n148# 0.00fF
+C197 XM5/w_n211_n319# m1_3034_n1672# 0.00fF
+C198 XM2/w_n211_n319# XM1/w_n211_n319# 0.02fF
+C199 m1_n342_n1718# m1_n654_n1596# 0.05fF
+C200 m1_540_40# m1_630_n148# 0.03fF
+C201 D XM4/w_n211_n319# 0.05fF
+C202 m1_n246_n1566# XM4/w_n211_n319# 0.00fF
+C203 m1_1416_60# XM1/w_n211_n319# 0.00fF
+C204 E m1_630_n148# 0.01fF
+C205 m1_n668_n500# XM4/w_n211_n319# 0.00fF
+C206 m1_3050_20# m1_n654_n1596# 0.05fF
+C207 m1_2182_64# XM2/w_n211_n319# 0.00fF
+C208 m1_540_40# XM1/w_n211_n319# 0.00fF
+C209 A m1_536_n1694# 0.00fF
+C210 m1_2210_n1670# m1_n246_n1566# 0.04fF
+C211 D m1_2210_n1670# 0.08fF
+C212 m1_2182_64# m1_1416_60# 0.01fF
+C213 C XM3/w_n211_n319# 0.05fF
+C214 B m1_n654_n1596# 0.38fF
+C215 XM5/w_n211_n319# vn 0.00fF
+C216 m1_2182_64# m1_540_40# 0.00fF
+C217 m1_1402_n1672# m1_n654_n1596# 0.04fF
+C218 m1_1416_60# XM2/w_n211_n319# 0.00fF
+C219 E m1_2182_64# 0.00fF
+C220 XM1/w_n211_n319# m1_n342_n1718# 0.00fF
+C221 m1_3852_24# XM4/w_n211_n319# 0.00fF
+C222 m1_3050_20# m1_630_n148# 0.00fF
+C223 m1_540_40# XM2/w_n211_n319# 0.36fF
+C224 m1_540_40# m1_1416_60# 0.00fF
+C225 m1_630_n148# B 0.13fF
+C226 E m1_1416_60# 0.00fF
+C227 m1_2210_n1670# m1_3860_n1652# 0.00fF
+C228 XM4/w_n211_n319# m1_n654_n1596# 0.11fF
+C229 XM1/w_n211_n319# B 0.01fF
+C230 m1_2182_64# m1_3050_20# 0.00fF
+C231 vp m1_536_n1694# 0.00fF
+C232 m1_2210_n1670# m1_n654_n1596# 0.00fF
+C233 m1_2182_64# B 0.00fF
+C234 vn m1_536_n1694# 0.04fF
+C235 XM6/w_n211_n319# m1_3134_n1514# 0.00fF
+C236 C m1_1514_n134# 0.06fF
+C237 m1_1416_60# m1_3050_20# 0.00fF
+C238 D XM3/w_n211_n319# 0.01fF
+C239 XM3/w_n211_n319# m1_n246_n1566# 0.00fF
+C240 m1_630_n148# XM4/w_n211_n319# 0.26fF
+C241 XM2/w_n211_n319# B 0.06fF
+C242 m1_n668_n500# XM3/w_n211_n319# 0.17fF
+C243 XM6/w_n211_n319# F 0.05fF
+C244 m1_1416_60# B 0.00fF
+C245 E m1_3050_20# 0.06fF
+C246 m1_1416_60# m1_1402_n1672# 0.00fF
+C247 m1_2210_n1670# m1_630_n148# 0.00fF
+C248 m1_540_40# B 0.06fF
+C249 m1_n246_n1566# m1_3134_n1514# 0.00fF
+C250 D m1_3134_n1514# 0.00fF
+C251 m1_2182_64# XM4/w_n211_n319# 0.34fF
+C252 XM6/w_n211_n319# m1_1514_n134# 0.17fF
+C253 D F 0.00fF
+C254 C vp 0.00fF
+C255 XM2/w_n211_n319# XM4/w_n211_n319# 0.00fF
+C256 C vn 0.00fF
+C257 m1_n342_n1718# B 0.00fF
+C258 m1_2210_n1670# m1_2182_64# 0.00fF
+C259 m1_n246_n1566# A 0.06fF
+C260 m1_1416_60# XM4/w_n211_n319# 0.01fF
+C261 m1_n668_n500# A 0.31fF
+C262 m1_540_40# XM4/w_n211_n319# 0.00fF
+C263 XM3/w_n211_n319# m1_n654_n1596# 0.09fF
+C264 E XM4/w_n211_n319# 0.01fF
+C265 m1_3860_n1652# m1_3134_n1514# 0.03fF
+C266 m1_3852_24# m1_3134_n1514# 0.00fF
+C267 m1_n246_n1566# m1_1514_n134# 0.00fF
+C268 D m1_1514_n134# 0.06fF
+C269 F VSUBS 0.63fF
+C270 E VSUBS 0.47fF
+C271 D VSUBS 0.38fF
+C272 C VSUBS 0.41fF
+C273 B VSUBS 0.45fF
+C274 A VSUBS 0.59fF
+C275 m1_3860_n1652# VSUBS 0.28fF
+**FLOATING
+C276 m1_3034_n1672# VSUBS 0.27fF
+**FLOATING
+C277 m1_2210_n1670# VSUBS 0.27fF
+**FLOATING
+C278 m1_1402_n1672# VSUBS 0.27fF
+**FLOATING
+C279 m1_536_n1694# VSUBS 0.28fF
+**FLOATING
+C280 m1_n342_n1718# VSUBS 0.29fF
+**FLOATING
+C281 m1_3134_n1514# VSUBS 0.15fF
+**FLOATING
+C282 vn VSUBS 1.30fF
+C283 m1_n246_n1566# VSUBS 0.81fF
+**FLOATING
+C284 XM6/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+C285 XM5/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+C286 XM4/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+C287 XM3/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+C288 m1_630_n148# VSUBS 0.03fF **FLOATING
+C289 XM2/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+C290 vp VSUBS 0.42fF
+C291 XM1/w_n211_n319# VSUBS 1.08fF
+**FLOATING
+.ends
+```
 
 
