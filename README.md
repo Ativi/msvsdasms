@@ -1137,6 +1137,8 @@ cd build
 ```
 (general) ativi07@ativi07-VirtualBox:~/Desktop/ALIGN-public/build$ python3 ../bin/schematic2layout.py  /home/ativi07/.xschem/simulations -p ../pdks/SKY130_PDK/ 
 ```
+- Generated .lef and .gds
+- 
 ![gds generated using align](https://user-images.githubusercontent.com/68071764/220627315-c6b64aae-0726-462f-8c89-745b0ea29187.png)
 
 
