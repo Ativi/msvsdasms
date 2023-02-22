@@ -1157,3 +1157,6 @@ ext2spice
 
 ![newnetlist](https://user-images.githubusercontent.com/68071764/220634036-44221f57-3dbb-4663-ab9b-fb167caf6a1f.png)
 
+- Merged the testbench netlist and the new generated netlist(Just keep one subckt there are two subckts).
+
+
