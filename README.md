@@ -1107,5 +1107,39 @@ C291 XM1/w_n211_n319# VSUBS 1.08fF
 **FLOATING
 .ends
 ```
+### Post-layout simulation of function using ALIGN
+
+- Create a python virtualenv
+ ```
+ python -m venv general
+source general/bin/activate
+python -m pip install pip --upgrade
+mkdir build
+cd build
+```
+
+- Running Design(use your original inverter spice file generated from xschem as input).
+
+![error netlist](https://user-images.githubusercontent.com/68071764/220626124-15b81438-18a1-4b6f-a2a2-66e7fdac407d.png)
+
+- Once you run this netlist, below error will be pop up 
+
+![align errorr](https://user-images.githubusercontent.com/68071764/220626444-ee6047ba-3b04-4edc-b62e-3107aa853de3.png)
+
+- Make changes as per error, in my case:
+
+![align input](https://user-images.githubusercontent.com/68071764/220625621-4d443a91-5fbb-494a-bd1f-61b19c63c38f.png)
+
+- NOTE!! ( The first path should be netlist directory)(Rename the spice file netlist with .sp instead of .spice tool understands .sp format)
+
+- Now run the design(location of your spice file and the pdk)
+
+```
+(general) ativi07@ativi07-VirtualBox:~/Desktop/ALIGN-public/build$ python3 ../bin/schematic2layout.py  /home/ativi07/.xschem/simulations -p ../pdks/SKY130_PDK/ 
+```
+![gds generated using align](https://user-images.githubusercontent.com/68071764/220627315-c6b64aae-0726-462f-8c89-745b0ea29187.png)
+
+
+
 
 
