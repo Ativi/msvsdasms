@@ -1166,4 +1166,10 @@ ext2spice
 
 ![plot A fn](https://user-images.githubusercontent.com/68071764/220641526-18d344b5-0cb5-4ae2-9b96-6f0383dbe5c9.png)
 
+- netlist can be compared using LVS by netgen.
+
+```
+(general) ativi07@ativi07-VirtualBox:~/Desktop/ALIGN-public/week0/inverter/netgen$ netgen -batch lvs "../mag/mergedfunction.spice"  "/home/ativi07/.xschem/simulations/alignfunctb.spice"
+```
+![compare 14 and 15](https://user-images.githubusercontent.com/68071764/220644365-b4894f2a-b01d-4e6d-be66-d4e7fdfc4ad7.png)
 
