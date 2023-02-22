@@ -1155,4 +1155,5 @@ ext2spice
 ```
 - New spice netlist will be created. "Function_0.spice"
 
+![newnetlist](https://user-images.githubusercontent.com/68071764/220634036-44221f57-3dbb-4663-ab9b-fb167caf6a1f.png)
 
