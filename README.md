@@ -1147,4 +1147,12 @@ cd build
 
 - GDS file loaded, Extract the netlist file.
 
+```
+extract do local
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+- New spice netlist will be created. "Function_0.spice"
+
 
