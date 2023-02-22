@@ -1141,6 +1141,7 @@ cd build
 - 
 ![gds generated using align](https://user-images.githubusercontent.com/68071764/220627315-c6b64aae-0726-462f-8c89-745b0ea29187.png)
 
+- Now open .gds file using magic tool(Go to options and Read GDS).
 
 
 
