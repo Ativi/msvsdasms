@@ -1158,5 +1158,12 @@ ext2spice
 ![newnetlist](https://user-images.githubusercontent.com/68071764/220634036-44221f57-3dbb-4663-ab9b-fb167caf6a1f.png)
 
 - Merged the testbench netlist and the new generated netlist(Just keep one subckt there are two subckts).
+- Run the updated spice netlist(the extracted netlist which you get from magic does not contain the control statements(plots, sources, etc). It's just a bare subckt(black box or an IC). You must add the .control statements(power it) by pasting them from the pre-layout and get a similar results.
+
+![output using align](https://user-images.githubusercontent.com/68071764/220641415-59d9e43a-b54c-4d2d-a838-db6da0d50dd5.png)
+
+![opalign](https://user-images.githubusercontent.com/68071764/220641496-576d2aae-f9df-4f12-9991-b6bb13e498f4.png)
+
+![plot A fn](https://user-images.githubusercontent.com/68071764/220641526-18d344b5-0cb5-4ae2-9b96-6f0383dbe5c9.png)
 
 
