@@ -1,4 +1,4 @@
-# msvsdasms
+# VSD Mixed-signal PD Research Program
 
 Weekly AI's 
 
