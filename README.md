@@ -25,8 +25,8 @@ Weekly AI's
 |16.| Compare 14 and 15|completed|
 |17.| Update your findings on your GitHub repo with the title “Week 1” |updated|
      
-|S. No. | Week 2 AI's |Status| 
-|:---:| :---:| :---:|
-|18.| Install Klayout|completed |
-
+|S. No.   |    Week 2 AI's    |   Status  | 
+|  :---:  | :---:  |  :---:  |
+| 18. |  Install Klayout | completed |
+| 19. | Install Yosys | completed |
      
