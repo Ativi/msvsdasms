@@ -23,7 +23,7 @@ Weekly AI's
 |14.| Post layout characterization using magic/ngspice and SKY130 PDKs|completed|
 |15.|Post layout characterization using ALIGN |completed|
 |16.| Compare 14 and 15|completed|
-|17.| Update your findings on your GitHub repo with the title “Week 1” |completed|
+|17.| Update your findings on your GitHub repo with the title “Week 1” |updated|
      
 |S. No. | Week 2 AI's |Status| 
 |:---:| :---:| :---:|
