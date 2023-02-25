@@ -43,3 +43,4 @@ sudo cmake --build build -j $(nproc) --target install
 # Optional: Delete the 'lemon' sources
 cd ~/Work/vlsi/tools && rm -fR lemon
 ```
+![yosys](https://user-images.githubusercontent.com/68071764/221332544-77150620-db7c-471d-a145-fa0dec247c55.png)
