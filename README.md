@@ -27,6 +27,8 @@ Weekly AI's
      
 |S. No.   |    Week 2 AI's    |   Status  | 
 |  :---:  | :---:  |  :---:  |
-| 18. |  Install Klayout | completed |
+| 18. | Install Klayout | completed |
 | 19. | Install Yosys | completed |
+| 20. | Install OpenRoad | completed|
+| 21. | Install OpenFASoc |completed |
      
