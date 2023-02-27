@@ -1,6 +1,6 @@
 # WEEK2 AI's
 
-## 1. KLAYOUT INSTALLATION
+## 1. KLAYOUT Installation
 
 Download the ‘.deb’ file from the KLayout homepage and install it, as shown below.
 ```
@@ -14,7 +14,7 @@ sudo apt install -y ./klayout_0.28.5-1_amd64.deb
 
 ![klayout done](https://user-images.githubusercontent.com/68071764/220927180-97c18f0b-f205-4d3e-a91e-378237d378be.png)
 
-## 2. Install Yosys and OpenROAD using OpenROAD-flow-scripts
+## 2. Yosys and OpenROAD using OpenROAD-flow-scripts Installation
 
 ```
 cd ~/Work/vlsi/tools
@@ -96,3 +96,57 @@ You should see something like this in the output:
 
 ![yos![Uploading yosys output.png…]()
 ys](https://user-images.githubusercontent.com/68071764/221332544-77150620-db7c-471d-a145-fa0dec247c55.png)
+
+## 3. Installing OpenRoad
+
+- OpenROAD is an integrated chip physical design tool that takes a design from synthesized Verilog to routed layout.
+
+- An outline of steps used to build a chip using OpenROAD is shown below:
+
+- Initialize floorplan - define the chip size and cell rows
+- Place pins (for designs without pads )
+- Place macro cells (RAMs, embedded macros)
+- Insert substrate tap cells
+- Insert power distribution network
+- Macro Placement of macro cells
+- Global placement of standard cells
+- Repair max slew, max capacitance, and max fanout violations and long wires
+- Clock tree synthesis
+- Optimize setup/hold timing
+- Insert fill cells
+- Global routing (route guides for detailed routing)
+- Antenna repair
+- Detailed routing
+- Parasitic extraction
+- Static timing analysis
+
+
+- Steps to install openROAD are
+
+```
+cd
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
+cd OpenROAD
+sudo ./etc/DependencyInstaller.sh
+cd
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+cd OpenROAD-flow-scripts
+./build_openroad.sh –local
+export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
+export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
+```
+#### Building OpenROAD Locally 
+```
+./build_openroad.sh --local
+source setup_env.sh
+```
+
+- You will see the following message:
+```
+OPENROAD: <path>/OpenROAD-flow-scripts/tools/OpenROAD
+```
+
+![ofrs complete](https://user-images.githubusercontent.com/68071764/221502311-ec5038fe-7934-4e93-b6cc-932ca91f20a4.png)
+
+
+
