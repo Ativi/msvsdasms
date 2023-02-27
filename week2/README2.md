@@ -160,3 +160,22 @@ OPENROAD: <path>/OpenROAD-flow-scripts/tools/OpenROAD
 
 Now go to the home location of this repository (where the README.rst file is located) and ```run sudo ./dependencies.sh.```
 
+# Temperature Sensor Auxiliary Cells
+
+- An overview of how the Temperature Sensor Generator (temp-sense-gen) works internally in OpenFASoC.
+
+#### Circuit
+
+- This generator creates a compact mixed-signal temperature sensor based on the topology from this paper. It consists of a ring oscillator whose frequency is controlled by the voltage drop over a MOSFET operating in subthreshold regime, where its dependency on temperature is exponential.
+
+![image](https://user-images.githubusercontent.com/68071764/221508171-1c4db4d0-9108-4761-a18f-b8aa085a820d.png)
+
+- The physical implementation of the analog blocks in the circuit is done using two manually designed standard cells:
+
+- HEADER cell, containing the transistors in subthreshold operation;
+
+- SLC cell, containing the Split-Control Level Converter.
+
+- The gds and lef files of HEADER and SLC cells are pre-created before the start of the Generator flow.
+
+- The layout of the HEADER cell is shown below:
