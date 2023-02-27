@@ -31,7 +31,7 @@ Weekly AI's
 | 19. | Install Yosys and OpenROAD using OpenROAD-flow-scripts | completed |
 | 20. | Install OpenRoad | completed|
 | 21. | Install OpenFASoc |completed |
-| 22.| | Temperature Sensor Auxiliary Cells | completed|
+| 22.| Temperature Sensor Auxiliary Cells | completed|
 | 23. | Temperature Sensor Generation using OpenFASOC |completed|
 |24. |  Update your findings on your GitHub repo with the title “Week 2”| updated |
      
