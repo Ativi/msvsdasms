@@ -28,7 +28,7 @@ Weekly AI's
 |S. No.   |    Week 2 AI's    |   Status  | 
 |  :------------:  | :----------:  |  :----------:  |
 | 18. | Install Klayout | completed |
-| 19. | Install Yosys | completed |
+| 19. | Install Yosys and OpenROAD using OpenROAD-flow-scripts | completed |
 | 20. | Install OpenRoad | completed|
 | 21. | Install OpenFASoc |completed |
      
