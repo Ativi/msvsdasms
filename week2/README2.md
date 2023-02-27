@@ -62,7 +62,7 @@ printf 'source ~/Work/vlsi/tools/OpenROAD-flow-scripts/setup_env.sh\n' >> ~/.bas
 
 - Close the terminal and open a new one to pick up the environment variable changes.
 
-3. # Add VHDL to Yosys
+# Add VHDL to Yosys
 ```
 sudo apt install -y gnat
 cd ~/Work/vlsi/tools && git clone https://github.com/ghdl/ghdl.git && cd ghdl
@@ -174,8 +174,13 @@ Now go to the home location of this repository (where the README.rst file is loc
 
 - HEADER cell, containing the transistors in subthreshold operation;
 
+![headergds](https://user-images.githubusercontent.com/68071764/221580258-b6f3ed4b-0316-48f5-bd95-31bb0eec3e20.png)
+
 - SLC cell, containing the Split-Control Level Converter.
+
+![slcgds](https://user-images.githubusercontent.com/68071764/221580300-fdff5ab7-83b0-443b-9e45-5ef42b2007c1.png)
 
 - The gds and lef files of HEADER and SLC cells are pre-created before the start of the Generator flow.
 
-- The layout of the HEADER cell is shown below:
+### Temperature Sensor Generation using OpenFASOC
+
