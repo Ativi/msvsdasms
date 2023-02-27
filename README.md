@@ -26,7 +26,7 @@ Weekly AI's
 |17.| Update your findings on your GitHub repo with the title “Week 1” |updated|
      
 |S. No.   |    Week 2 AI's    |   Status  | 
-|  :---:  | :---:  |  :---:  |
+|  :------------:  | :----------:  |  :----------:  |
 | 18. | Install Klayout | completed |
 | 19. | Install Yosys | completed |
 | 20. | Install OpenRoad | completed|
