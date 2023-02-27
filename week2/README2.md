@@ -159,5 +159,4 @@ OPENROAD: <path>/OpenROAD-flow-scripts/tools/OpenROAD
 ```git clone https://github.com/idea-fasoc/openfasoc```
 
 Now go to the home location of this repository (where the README.rst file is located) and ```run sudo ./dependencies.sh.```
-Or follow the below steps
-cd
+
