@@ -243,8 +243,6 @@ After a successful run the following message is displayed:
 
 - In the following directory all the files corresponding to different stages of the RTL2GDS flow is saved.
 
-![resultfolder](https://user-images.githubusercontent.com/68071764/221587314-5f6deacb-0af9-458d-87b8-6c11ab072ad5.png)
-
 ![openfasoc results](https://user-images.githubusercontent.com/68071764/221587968-af0d16ee-858e-4a70-a79d-a3ba7b09b955.png)
 
 - Viewing the GDS view of the temperature generator using klayout in result folder.```klayout 6_final.gds```
