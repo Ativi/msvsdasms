@@ -1,4 +1,4 @@
-WEEK2 AI's
+# WEEK2 AI's
 
 ## 1. KLAYOUT INSTALLATION
 
@@ -23,7 +23,7 @@ git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scri
 
 Before you can go any further, you need to install some prerequisite software packages:
 
-# Packages needed by Yosys
+### Packages needed by Yosys
 ```
 sudo apt install -y clang bison flex \
     libreadline-dev gawk tcl-dev libffi-dev git \
@@ -31,13 +31,13 @@ sudo apt install -y clang bison flex \
     libboost-python-dev libboost-filesystem-dev zlib1g-dev
  ```
  
-# Packages needed by OpenROAD
+### Packages needed by OpenROAD
 ```
 sudo apt install -y cmake qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools \
     libmng2 qt5-image-formats-plugins tcl-tclreadline \
     swig libboost-all-dev libeigen3-dev libspdlog-dev
 ```
-# Build 'lemon' from source
+### Build 'lemon' from source
 ```
 cd ~/Work/vlsi/tools && mkdir lemon && cd lemon
 wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz
@@ -45,7 +45,7 @@ tar-zxf lemon-1.3.1.tar.gz && cd lemon-1.3.1
 cmake -B build .
 sudo cmake --build build -j $(nproc) --target install
  ```
-# Optional: Delete the 'lemon' sources
+### Optional: Delete the 'lemon' sources
 ```
 cd ~/Work/vlsi/tools && rm -fR lemon
 ```
@@ -54,14 +54,13 @@ Build all the tools needed for OpenROAD:
 cd ~/Work/vlsi/tools/OpenROAD-flow-scripts
 ./build_openroad.sh --local
 ```
+- This step can take over 30 minutes.
 
-# This step can take over 30 minutes
-
-# Update '.bashrc' to point to the OpenROAD tools
+### Update '.bashrc' to point to the OpenROAD tools
 printf '\n# Add Yosys and OpenROAD environment variables\n' >> ~/.bashrc
 printf 'source ~/Work/vlsi/tools/OpenROAD-flow-scripts/setup_env.sh\n' >> ~/.bashrc
 
-Close the terminal and open a new one to pick up the environment variable changes.
+- Close the terminal and open a new one to pick up the environment variable changes.
 
 3. # Add VHDL to Yosys
 ```
