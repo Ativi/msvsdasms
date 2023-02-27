@@ -181,6 +181,74 @@ Now go to the home location of this repository (where the README.rst file is loc
 ![slcgds](https://user-images.githubusercontent.com/68071764/221580300-fdff5ab7-83b0-443b-9e45-5ef42b2007c1.png)
 
 - The gds and lef files of HEADER and SLC cells are pre-created before the start of the Generator flow.
+- The .gds files exist in ``` /.../openfasoc/openfasoc/generators/temp-sense-gen/blocks/sky130hd/gds ```
 
 ### Temperature Sensor Generation using OpenFASOC
+
+1. <b>Verilog Generation:</b>
+
+- By using make sky130hd_temp_verilog in ```/.../openfasoc/openfasoc/generators/temp-sense-gen ``` the verilog code based on <b>.jason file</b> will get generated. In this file temperature is being varied from -20 C to 100 C, and the parameter toward which the circuit must be optimized is selected which is <b>"error"</b> here. Based on the operating temperature range, generator calculates the number of header and inverters to minimize the error. 
+- test.jason:
+```
+{
+    "module_name": "tempsenseInst_error",
+    "generator": "temp-sense-gen",
+    "specifications": {
+    	"temperature": { "min": -20, "max": 100 },
+    	"power": "",
+    	"error": "",
+    	"area": "",
+    	"optimization":"error",
+    	"model" :"modelfile.csv"
+	}
+}
+```
+- By runnung make sky130hd_temp_verilog, the result on Terminal is: 
+
+![openfasoc verilog generated](https://user-images.githubusercontent.com/68071764/221584760-593b4d5b-126c-4385-a7e1-1fd75e9eca1e.png)
+
+- The opmization is done based on "modelfile.csv" exists in ``` /.../openfasoc/openfasoc/generators/temp-sense-gen/models ```
+
+![image](https://user-images.githubusercontent.com/68071764/221585019-10033b58-bf91-4231-9cf2-4c66d2144d1f.png)
+
+- After running the``` make sky130hd_temp_verilog``` command, the verilog files of ```counter.v, TEMP_ANALOG_hv.nl.v, TEMP_ANALOG_lv.nl.v ```are created in the ```/.../openfasoc/openfasoc/generators/temp-sense-gen/src``` folder. 
+
+2. To run the default generator:
+ -  cd into``` ~/openfasoc/generators/temp_sense`` and  enter ```make sky130hd_temp``` command.
+ -  sometimes PDK_ROOT error arises:
+ 
+ ![image](https://user-images.githubusercontent.com/68071764/221585754-b43d12fb-3dc7-4b57-a0cf-f833495b3dd4.png)
+ 
+ - Make changes manually in config.jason file
+ 
+ ![image](https://user-images.githubusercontent.com/68071764/221586029-8198ab17-3442-4b3d-8e7a-fd6f3c5e6247.png)
+
+ - If OpenROAD not found in path error arises, provide path to openROAD along with PDK_ROOT 
+
+![image](https://user-images.githubusercontent.com/68071764/221586567-33078602-9715-4f77-bbc5-e68242a878a2.png)
+
+ ```
+export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD/
+export PATH=/home/ativi07/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/home/ativi07/OpenROAD-flow-scripts/tools/install/yosys/bin:/home/ativi07/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
+```
+ 
+The default circuit’s physical design generation can be divided into three parts:
+
+- Verilog generation
+- RTL-to-GDS flow (OpenROAD)
+- Post-layout verification (DRC and LVS)
+After a successful run the following message is displayed:
+
+![openfasoc](https://user-images.githubusercontent.com/68071764/221587137-00533d68-537c-4516-9d41-1a4a2c56d885.png)
+
+- In the following directory all the files corresponding to different stages of the RTL2GDS flow is saved.
+
+![resultfolder](https://user-images.githubusercontent.com/68071764/221587314-5f6deacb-0af9-458d-87b8-6c11ab072ad5.png)
+
+![openfasoc results](https://user-images.githubusercontent.com/68071764/221587968-af0d16ee-858e-4a70-a79d-a3ba7b09b955.png)
+
+- Viewing the GDS view of the temperature generator using klayout in result folder.```klayout 6_final.gds```
+
+![finalgdsopenfasoc](https://user-images.githubusercontent.com/68071764/221588079-bf3eeb2f-36f4-4dda-9a65-aadf21e35f29.png)
+
 
