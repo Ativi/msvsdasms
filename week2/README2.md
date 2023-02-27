@@ -149,4 +149,15 @@ OPENROAD: <path>/OpenROAD-flow-scripts/tools/OpenROAD
 ![ofrs complete](https://user-images.githubusercontent.com/68071764/221502311-ec5038fe-7934-4e93-b6cc-932ca91f20a4.png)
 
 
+### 4. OpenFASOC Installation
 
+- OpenFASoC is a project focused on automated analog generation from user specification to GDSII with fully open-sourced tools. It is led by a team of researchers at the University of Michigan and is inspired from FASoC which sits on proprietary software.
+
+- The tool is comprised of analog and mixed-signal circuit generators, which automatically create a physical design based on user specifications.
+
+- First, cd into a directory of your choice and clone the OpenFASoC repository:
+```git clone https://github.com/idea-fasoc/openfasoc```
+
+Now go to the home location of this repository (where the README.rst file is located) and ```run sudo ./dependencies.sh.```
+Or follow the below steps
+cd
