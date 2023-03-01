@@ -413,4 +413,19 @@ C39 XM1/w_n211_n319# VSUBS 1.09fF
 ![magic_post_layout](https://user-images.githubusercontent.com/68071764/222129596-5b90ceaa-aa93-4831-ad11-fa1f6b3943b7.png)
  
 
+# Generate layout for ring oscillator using ALIGN
 
+- Create a python virtualenv
+```
+python -m venv general
+source general/bin/activate
+python -m pip install pip --upgrade
+mkdir build
+cd build
+```
+
+- Run Design(use your original inverter spice file generated from xschem as input)
+
+![align_input_netlist](https://user-images.githubusercontent.com/68071764/222158413-de3f4b89-b4e9-4eb0-a843-b839a766f334.png)
+
+![gds generated](https://user-images.githubusercontent.com/68071764/222158855-5d21a536-238d-4884-b124-0fd881e110bb.png)
