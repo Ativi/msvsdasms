@@ -412,8 +412,7 @@ C39 XM1/w_n211_n319# VSUBS 1.09fF
 
 ![magic_post_layout](https://user-images.githubusercontent.com/68071764/222129596-5b90ceaa-aa93-4831-ad11-fa1f6b3943b7.png)
  
-
-# Generate layout for ring oscillator using ALIGN
+# Post-layout simulation of ring oscillator using ALIGN
 
 - Create a python virtualenv
 ```
