@@ -79,7 +79,7 @@ schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
 
 ![schematic example](https://user-images.githubusercontent.com/68071764/218166479-44909a20-9ed1-43e2-8de3-3b7db150f814.png)
 
-FLOW 
+## FLOW 
 
 - Create a python virtualenv
 ```
