@@ -35,3 +35,10 @@ Weekly AI's
 | 23. | Temperature Sensor Generation using OpenFASOC |completed|
 |24. |  Update your findings on your GitHub repo with the title “Week 2”| updated |
      
+|S. No.   |    Week 3 AI's    |   Status  | 
+|  :------------:  | :----------:  |  :----------:  |
+| 25. | Three-stage ring oscillator design in Xschem | completed |
+| 26. | Layout for the ring oscillator using Magic | completed |
+| 27. | Generating layout for ring oscillator using ALIGN | completed|
+| 28. | Post layout characterization using ALIGN |completed |
+|29. |  Update your findings on your GitHub repo with the title “Week 3”| updated |
