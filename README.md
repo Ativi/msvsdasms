@@ -17,7 +17,7 @@ Weekly AI's
 |:---:| :---:| :---:| 
 |9.| Install ALIGN tool|Completed|
 |10.| Inverter post-layout characterization using (step.9)|completed|
-|11.| Compare 10 and 4||
+|11.| Compare 10 and 4|completed|
 |12.| Enroll in FREE VSD-custom layout course |completed|
 |13.|Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS|Completed|
 |14.| Post layout characterization using magic/ngspice and SKY130 PDKs|completed|
