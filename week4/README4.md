@@ -7,3 +7,7 @@
 ![adc_schematic](https://user-images.githubusercontent.com/68071764/224414868-b0a06317-d1a3-4cf8-96d7-d5e6d6a539d1.png)
 
 ![ADC_out](https://user-images.githubusercontent.com/68071764/224414916-08bfd55b-c213-48f6-8aea-39fc0fb6669d.png)
+
+![align](https://user-images.githubusercontent.com/68071764/224415448-3c82684b-0d30-42bf-bcd2-12de728504f1.png)
+
+![image](https://user-images.githubusercontent.com/68071764/224415636-443c7540-743b-41ac-8a6c-6520ec68379b.png)
