@@ -11,3 +11,7 @@
 ![align](https://user-images.githubusercontent.com/68071764/224415448-3c82684b-0d30-42bf-bcd2-12de728504f1.png)
 
 ![image](https://user-images.githubusercontent.com/68071764/224415636-443c7540-743b-41ac-8a6c-6520ec68379b.png)
+
+## Post-layout simulation using ALIGN
+
+![VirtualBox_opensource_eda_ubuntu Clone_11_03_2023_01_34_18](https://user-images.githubusercontent.com/68071764/224417186-035915a5-d690-4bca-9444-ca9e9cbf018a.png)
