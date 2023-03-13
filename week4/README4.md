@@ -376,11 +376,54 @@ XC3 Y gnd sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=10 m=10
 
 .GLOBAL GND
 .end
-```
 
 ![ring_adc_out](https://user-images.githubusercontent.com/68071764/224703366-5aa0f63b-4c4c-4d6e-8795-e605cd67edde.png)
 
 ![align_out_ringadc](https://user-images.githubusercontent.com/68071764/224703385-29cf5c97-8f23-4ce5-b1d5-1ed2df669c78.png)
 
-## Post-layout simulation of function using ALIGN
+### Top Module of Verilog Code for asynchronous up/down counter
 
+```
+module analog_async_up_down(
+      input vin
+      input VDD
+      output out
+);
+
+
+wire vin;
+
+ring_osc RingOsc_cap(
+        .out(vin)
+);
+
+adc onebitADC_test(
+      .vin(vin),
+      .vref(vref),
+      .out(out)
+);
+
+endmodule
+```
+### Verilog file for Ring Oscillator
+```
+module RingOsc(
+
+       input vdd
+       output Y
+);
+
+```
+
+### Verilog file for one bit ADC
+```
+module onebitADC(
+
+       input vin,
+       input vref,
+       input vdd,
+
+       output out
+
+);
+```
