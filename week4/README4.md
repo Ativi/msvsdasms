@@ -84,6 +84,7 @@ plot vin out vref
 ```
 extract do local
 extract all
+ext2spice lvs
 ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
