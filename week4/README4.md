@@ -74,4 +74,6 @@ plot vin out vref
 
 ![VirtualBox_opensource_eda_ubuntu Clone_11_03_2023_01_34_18](https://user-images.githubusercontent.com/68071764/224417186-035915a5-d690-4bca-9444-ca9e9cbf018a.png)
 
-### Work in progress
+![K_lef_onebitadc](https://user-images.githubusercontent.com/68071764/224645329-1fe632c6-50d1-4905-ab9f-aa42ddd3aaaa.png)
+
+![VirtualBox_opensource_eda_ubuntu Clone_13_03_2023_13_56_04](https://user-images.githubusercontent.com/68071764/224646542-2b3fbf33-2277-4f59-860c-21d91ecca97f.png)
