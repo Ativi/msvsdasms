@@ -74,8 +74,23 @@ plot vin out vref
 
 ![image](https://user-images.githubusercontent.com/68071764/224415636-443c7540-743b-41ac-8a6c-6520ec68379b.png)
 
-![VirtualBox_opensource_eda_ubuntu Clone_11_03_2023_01_34_18](https://user-images.githubusercontent.com/68071764/224417186-035915a5-d690-4bca-9444-ca9e9cbf018a.png)
-
 ![K_lef_onebitadc](https://user-images.githubusercontent.com/68071764/224645329-1fe632c6-50d1-4905-ab9f-aa42ddd3aaaa.png)
 
 ![VirtualBox_opensource_eda_ubuntu Clone_13_03_2023_13_56_04](https://user-images.githubusercontent.com/68071764/224646542-2b3fbf33-2277-4f59-860c-21d91ecca97f.png)
+
+![VirtualBox_opensource_eda_ubuntu Clone_11_03_2023_01_34_18](https://user-images.githubusercontent.com/68071764/224417186-035915a5-d690-4bca-9444-ca9e9cbf018a.png)
+
+- GDS file loaded, Extract the netlist file.
+```
+extract do local
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+- New spice netlist will be created. 
+
+![image](https://user-images.githubusercontent.com/68071764/224649148-73b94a4d-9e3d-4d42-904c-b7ef4c63cb76.png)
+
+- Merged the testbench netlist and the new generated netlist.
+
