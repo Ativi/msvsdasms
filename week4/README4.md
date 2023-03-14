@@ -390,38 +390,36 @@ module analog_async_up_down(
       output out
 );
 
+wire ring_osc_out;
 
-wire vin;
-
-ring_osc RingOsc_cap(
-        .out(vin)
+// Instantiate the RingOsc_cap module
+RingOsc_cap RingOsc_cap_inst(
+        .out(ring_osc_out)
 );
 
-adc onebitADC_test(
-      .vin(vin),
+// Instantiate the adc module
+adc onebitADC_test_inst(
+      .vin(ring_osc_out),
       .vref(vref),
       .out(out)
 );
 
 endmodule
 ```
-### Verilog file for Ring Oscillator
-```
-module RingOsc(
 
-       input vdd
+### // Define the RingOsc_cap module
+```
+module RingOsc_cap(
        output Y
 );
 
 ```
 
-### Verilog file for one bit ADC
+### // Define the adc module
 ```
 module onebitADC(
-
        input vin,
        input vref,
-       input vdd,
 
        output out
 
