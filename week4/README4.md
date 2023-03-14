@@ -417,7 +417,7 @@ module RingOsc_cap(
 
 ### // Define the adc module
 ```
-module onebitADC(
+module onebitADC_test(
        input vin,
        input vref,
 
