@@ -1,0 +1,19 @@
+
+20. Printing statistics.
+
+=== analog_async_up_down ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     RingOsc_cap                     1
+     adc                             1
+
+   Area for cell type \RingOsc_cap is unknown!
+   Area for cell type \adc is unknown!
+
