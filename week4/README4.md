@@ -393,12 +393,12 @@ module analog_async_up_down(
 wire ring_osc_out;
 
 // Instantiate the RingOsc_cap module
-RingOsc_cap RingOsc_cap_inst(
+RingOsc_cap RingOsc_cap(
         .out(ring_osc_out)
 );
 
 // Instantiate the adc module
-adc onebitADC_test_inst(
+adc onebitADC_test(
       .vin(ring_osc_out),
       .vref(vref),
       .out(out)
