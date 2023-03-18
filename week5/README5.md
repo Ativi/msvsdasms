@@ -28,7 +28,7 @@
 
 2. Verilog Generation:-
 
-- Open the terminal in the your folder name -gen directory and do make sky130hd_verilog to generate the Verilog files.
+- Open the terminal in the your folder name -gen directory and do make sky130hd_verilog to generate the Verilog files
 
 ![image](https://user-images.githubusercontent.com/68071764/226058221-cccd2789-031f-41b5-9577-7c610703a602.png)
 
