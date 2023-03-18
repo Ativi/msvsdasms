@@ -16,7 +16,14 @@
 - Note2. - Your folder name and .py name should be same.
 - Note3. - Analyse your verilog file properly(VDD,IN,OUT) as per your design, else it may lead to n number of errors.
 - Note4. - Most of the errors will be due to space or Path, can be cleared patiently.
+- Note5. - Once all files are present in the folder, run below commands before make command to avoid path/pdk_root errors.
 
+```
+export PDK_ROOT=/home/ativi07/Desktop/open_pdks/sky130/
+export PATH=/usr/bin
+export PATH=/home/ativi07/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/
+export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
+```
 
 - Go to ```your folder/src/``` and place your dummy verilog code.
 
@@ -79,7 +86,7 @@ Verilog Generated:
 
 ![image](https://user-images.githubusercontent.com/68071764/226060226-dd43f11d-99ed-4b27-8b4b-38a9bd2f7b94.png)
 
--Final Congestion Report:
+- Final Congestion Report:
 
 ![image](https://user-images.githubusercontent.com/68071764/226060306-b95c4730-af01-41dd-aa6d-59390c5a2068.png)
 
