@@ -1,8 +1,0 @@
-{
-    "module_name": "analog_async_up_down",
-    "generator": "analog_async_up_down-gen",
-    "specifications": {
-    	"frequency": { "min": 5, "max": 12 },
-    	"model" :"modelfile.csv"
-	}
-}
