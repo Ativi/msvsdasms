@@ -1,0 +1,117 @@
+OpenROAD v2.0-6895-g5c85b36f8 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 15180 16320
+[INFO GPL-0005] CoreAreaUxUy: 179860 179520
+[INFO GPL-0006] NumInstances: 649
+[INFO GPL-0007] NumPlaceInstances: 2
+[INFO GPL-0008] NumFixedInstances: 561
+[INFO GPL-0009] NumDummyInstances: 86
+[INFO GPL-0010] NumNets: 3
+[INFO GPL-0011] NumPins: 5
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 300000 300000
+[INFO GPL-0014] CoreAreaLxLy: 15180 16320
+[INFO GPL-0015] CoreAreaUxUy: 179860 179520
+[INFO GPL-0016] CoreArea: 26875776000
+[INFO GPL-0017] NonPlaceInstsArea: 8131548800
+[INFO GPL-0018] PlaceInstsArea: 12512000
+[INFO GPL-0019] Util(%): 0.07
+[INFO GPL-0020] StdInstsArea: 12512000
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000000 HPWL: 437060
+[InitialPlace]  Iter: 2 CG residual: 0.00000000 HPWL: 9670
+[InitialPlace]  Iter: 3 CG residual: 0.00000000 HPWL: 9670
+[InitialPlace]  Iter: 4 CG residual: 0.00000000 HPWL: 9670
+[InitialPlace]  Iter: 5 CG residual: 0.00000000 HPWL: 9670
+[INFO GPL-0031] FillerInit: NumGCells: 1797
+[INFO GPL-0032] FillerInit: NumGNets: 3
+[INFO GPL-0033] FillerInit: NumGPins: 5
+[INFO GPL-0023] TargetDensity: 0.60
+[INFO GPL-0024] AveragePlaceInstArea: 6256000
+[INFO GPL-0025] IdealBinArea: 10426666
+[INFO GPL-0026] IdealBinCnt: 2577
+[INFO GPL-0027] TotalBinArea: 26875776000
+[INFO GPL-0028] BinCnt: 32 32
+[INFO GPL-0029] BinSize: 5147 5100
+[INFO GPL-0030] NumBins: 1024
+[NesterovSolve] Iter: 1 overflow: 0 HPWL: 161541
+[INFO GPL-0100] worst slack 1e+30
+[WARNING GPL-0102] No slacks found. Timing-driven mode disabled.
+[NesterovSolve] Snapshot saved at iter = 0
+[INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
+[INFO GPL-0036] TileLxLy: 0 0
+[INFO GPL-0037] TileSize: 6900 6900
+[INFO GPL-0038] TileCnt: 43 43
+[INFO GPL-0039] numRoutingLayers: 6
+[INFO GPL-0040] NumTiles: 1849
+[INFO GPL-0063] TotalRouteOverflowH2: 0.0
+[INFO GPL-0064] TotalRouteOverflowV2: 0.0
+[INFO GPL-0065] OverflowTileCnt2: 0
+[INFO GPL-0066] 0.5%RC: 0.6666666865348816
+[INFO GPL-0067] 1.0%RC: 0.6666666865348816
+[INFO GPL-0068] 2.0%RC: 0.6666666865348816
+[INFO GPL-0069] 5.0%RC: 0.6646586541669914
+[INFO GPL-0070] 0.5rcK: 1.0
+[INFO GPL-0071] 1.0rcK: 1.0
+[INFO GPL-0072] 2.0rcK: 0.0
+[INFO GPL-0073] 5.0rcK: 0.0
+[INFO GPL-0074] FinalRC: 0.6666667
+[NesterovSolve] Finished with Overflow: 0.000000
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack INF
+
+==========================================================================
+global place report_clock_skew
+--------------------------------------------------------------------------
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   9.53e-10   9.53e-10 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   9.53e-10   9.53e-10 100.0%
+                           0.0%       0.0%     100.0%
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 1805 u^2 7% utilization.
+
+Elapsed time: 0:00.69[h:]min:sec. CPU time: user 0.55 sys 0.13 (99%). Peak memory: 177536KB.

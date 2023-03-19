@@ -1,0 +1,116 @@
+OpenROAD v2.0-6895-g5c85b36f8 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING PDN-1024] -verbose has been deprecated.
+[INFO PDN-0001] Inserting grid: grid
+[INFO PDN-0001] Inserting grid: stdcell_analog1
+Check supply: VDD
+[WARNING PSM-0016] Voltage pad location (VSRC) file not specified, defaulting pad location to checkerboard pattern on core area.
+[WARNING PSM-0017] X direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0018] Y direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0019] Voltage on net VDD is not explicitly set.
+[WARNING PSM-0022] Using voltage 1.800V for VDD network.
+[WARNING PSM-0065] VSRC location not specified, using default checkerboard pattern with one VDD every size bumps in x-direction and one in two bumps in the y-direction
+[INFO PSM-0076] Setting metal node density to be standard cell height times 5.
+[WARNING PSM-0030] VSRC location at (97.520um, 97.920um) and size 10.000um, is not located on an existing power stripe node. Moving to closest node at (104.500um, 105.620um).
+[INFO PSM-0031] Number of PDN nodes on net VDD = 1780.
+[INFO PSM-0064] Number of voltage sources = 1.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 149.600um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 149.600um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 149.600um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 149.600um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 149.600um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 144.160um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 144.160um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 144.160um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 144.160um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 144.160um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 138.720um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 138.720um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 138.720um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 138.720um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 138.720um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 133.280um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 133.280um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 133.280um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 133.280um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 133.280um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 127.840um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 127.840um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 127.840um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 127.840um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 127.840um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 122.400um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 122.400um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 122.400um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 122.400um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 122.400um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 116.960um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 116.960um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 116.960um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 116.960um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 116.960um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 111.520um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 111.520um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 111.520um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 111.520um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 111.520um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 106.080um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 106.080um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 106.080um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 106.080um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 106.080um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 100.640um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 100.640um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 100.640um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 100.640um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 100.640um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 95.200um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 95.200um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 95.200um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 95.200um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 95.200um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 89.760um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 89.760um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 89.760um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 89.760um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 89.760um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 84.320um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 84.320um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 84.320um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 84.320um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 84.320um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 78.880um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 78.880um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 78.880um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 78.880um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 78.880um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 73.440um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 73.440um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 73.440um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 73.440um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 73.440um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 68.000um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 68.000um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 68.000um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 68.000um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 68.000um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 62.560um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 62.560um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 62.560um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 62.560um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 62.560um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 57.120um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 57.120um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 57.120um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 57.120um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 57.120um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (50.140um, 51.680um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (99.820um, 51.680um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (62.560um, 51.680um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (74.980um, 51.680um), layer: 2.
+[WARNING PSM-0038] Unconnected PDN node on net VDD at location (87.400um, 51.680um), layer: 2.
+[ERROR PSM-0069] Check connectivity failed.
+Error: pdn.tcl, 25 PSM-0069
+Command exited with non-zero status 1
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.53 sys 0.05 (99%). Peak memory: 103344KB.
