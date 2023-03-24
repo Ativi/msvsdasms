@@ -114,10 +114,40 @@ Verilog Generated:
 
 ![image](https://user-images.githubusercontent.com/68071764/226060918-cea7067a-acfc-42de-81c4-fdffcddcdc80.png)
 
-# Work In progress
+- IR DROP
+
+![IR ANALYSIS](https://user-images.githubusercontent.com/68071764/227596443-8fa3662e-bdb0-42f3-8efd-7eecff693c6c.png)
+
+- Place and Rout finish
+
+![PLACE AND ROUTE FINISH](https://user-images.githubusercontent.com/68071764/227596571-542ce1f1-dcb5-4f40-b1a6-e6f0f1363785.png)
+
+![reading_files after pR](https://user-images.githubusercontent.com/68071764/227596662-543ac8de-d05e-42dc-aec2-516b0020c609.png)
+
+- DRC Finished
+
+![loading drc](https://user-images.githubusercontent.com/68071764/227596773-76e5bf01-f8c3-47a2-8914-8fdd35b6d8b1.png)
+
+![drc_finished](https://user-images.githubusercontent.com/68071764/227596828-86f639e2-2baa-455a-bfb5-14cdf79d5272.png)
+
+- Results
+
+![circuit modified](https://user-images.githubusercontent.com/68071764/227597053-7a16610a-23ee-4543-826b-22477406e82b.png)
+
+![drc,lvs c![Uploading circuit modified.png…]()
+lean](https://user-images.githubusercontent.com/68071764/227596959-822477aa-d22a-4c65-a56a-3e283d3697b2.png)
+
+![image](https://user-images.githubusercontent.com/68071764/227597355-9c04d38c-5f48-41ba-94b1-5245d38df68e.png)
+
+# I am able to run my OpenFASoc flow, but i did not got the desired results, so my work is still in progress.
+
+- Desired Output/my output 
 
 
+![image](https://user-images.githubusercontent.com/68071764/227598025-abc3a00a-450a-47f6-95c0-666f58fce713.png)
+![image](https://user-images.githubusercontent.com/68071764/227598114-424b45ac-5fe0-493e-ad25-128fd4dddf0f.png)
 
+#WorkInProgress
 
 
 
