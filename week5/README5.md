@@ -144,8 +144,12 @@ lean](https://user-images.githubusercontent.com/68071764/227596959-822477aa-d22a
 
 - Desired Output/my output 
 
-
+Desired-
 ![image](https://user-images.githubusercontent.com/68071764/227598025-abc3a00a-450a-47f6-95c0-666f58fce713.png)
+
+- my output 
+![image](https://user-images.githubusercontent.com/68071764/227613389-a94b122f-6c17-4b2b-ae60-f2ad38027fa3.png)
+
 ![image](https://user-images.githubusercontent.com/68071764/227598114-424b45ac-5fe0-493e-ad25-128fd4dddf0f.png)
 
 #WorkInProgress
