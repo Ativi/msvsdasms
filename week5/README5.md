@@ -118,7 +118,7 @@ Verilog Generated:
 
 ![IR ANALYSIS](https://user-images.githubusercontent.com/68071764/227596443-8fa3662e-bdb0-42f3-8efd-7eecff693c6c.png)
 
-- Place and Rout finish
+- Place and Route finish
 
 ![PLACE AND ROUTE FINISH](https://user-images.githubusercontent.com/68071764/227596571-542ce1f1-dcb5-4f40-b1a6-e6f0f1363785.png)
 
