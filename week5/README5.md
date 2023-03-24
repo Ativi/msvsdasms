@@ -138,6 +138,7 @@ Verilog Generated:
 lean](https://user-images.githubusercontent.com/68071764/227596959-822477aa-d22a-4c65-a56a-3e283d3697b2.png)
 
 ![image](https://user-images.githubusercontent.com/68071764/227597355-9c04d38c-5f48-41ba-94b1-5245d38df68e.png)
+![image](https://user-images.githubusercontent.com/68071764/227598429-c39637c6-fef7-49f2-a900-be22e1d58d01.png)
 
 # I am able to run my OpenFASoc flow, but i did not got the desired results, so my work is still in progress.
 
