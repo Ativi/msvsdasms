@@ -249,12 +249,13 @@ After a successful run the following message is displayed:
 
 ![finalgdsopenfasoc](https://user-images.githubusercontent.com/68071764/221588079-bf3eeb2f-36f4-4dda-9a65-aadf21e35f29.png)
 
+## Post-layout verification
+
+- OpenFASoC employs DRC (Design Rule Check) and LVS (Layout vs. Schematic) procedures to verify the manufacturability and conformity of the generated design to the specified requirements. To execute these procedures, the flow/Makefile includes the targets magic_drc and netgen_lvs, which are run using make.
+- The DRC step utilizes Magic to analyze the GDS file produced by the design and identify any violations of the specified constraints. In case of any errors, a report is generated and stored in temp-sense-gen/flow/reports/.
+- In LVS, Magic extracts the netlist of the layout and compares it with the original circuit netlist to validate the accuracy of the physical implementation. The results of the layout extraction are stored in temp-sense-gen/flow/objects/.
 
 
-
-
-
-
--------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
