@@ -411,6 +411,10 @@ C9 Y GND 6.41fF
 
 ![updated_align_waveform](https://user-images.githubusercontent.com/68071764/222704097-343c1b6d-1adf-437f-9df8-be4cad666569.png)
 
+## Conclusion
 
+- The XSchem tool was used to create a schematic for a 3-stage Ring Oscillator, and the desired output was achieved through Ngspice simulation. To convert the netlist into a layout in GDS format, ALIGN was used. Then, the GDS file was converted back into a netlist with parasitics using Magic, and the waveform output was simulated using Ngspice. It was observed that the output of the ALIGN tool remained unchanged, but the time period of the oscillator increased, leading to a reduction in the maximum operating speed.
+
+- After designing a custom layout for the Ring Oscillator, the output of Magic was analyzed using Ngspice, which produced results similar to those obtained with ALIGN, but with a longer time period. Thus, it can be concluded that ALIGN is a suitable tool for the job as it requires less effort and delivers satisfactory results.
 
 
