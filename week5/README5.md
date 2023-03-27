@@ -140,19 +140,19 @@ lean](https://user-images.githubusercontent.com/68071764/227596959-822477aa-d22a
 ![image](https://user-images.githubusercontent.com/68071764/227597355-9c04d38c-5f48-41ba-94b1-5245d38df68e.png)
 ![image](https://user-images.githubusercontent.com/68071764/227598429-c39637c6-fef7-49f2-a900-be22e1d58d01.png)
 
-# I am able to run my OpenFASoc flow, but i did not got the desired results, so my work is still in progress.
 
-- Desired Output/my output 
+- Final GDS file in klayout
 
-Desired-
-![image](https://user-images.githubusercontent.com/68071764/227598025-abc3a00a-450a-47f6-95c0-666f58fce713.png)
+![gds](https://user-images.githubusercontent.com/68071764/227903205-162d3feb-68ca-4a71-9f08-2f1282ba45c6.png)
 
-- my output 
-![image](https://user-images.githubusercontent.com/68071764/227613389-a94b122f-6c17-4b2b-ae60-f2ad38027fa3.png)
+![ringosc](https://user-images.githubusercontent.com/68071764/227903236-896ae37e-bc93-41ac-b72e-5e1fe75b3649.png)
 
-![image](https://user-images.githubusercontent.com/68071764/227598114-424b45ac-5fe0-493e-ad25-128fd4dddf0f.png)
+![yuhihio](https://user-images.githubusercontent.com/68071764/227903979-3ff2de9d-5f19-4b7d-814e-cca53cc3da47.png)
 
-#WorkInProgress
+
+## Conclusion
+RTL to GDS flow is successful using OpenFASOC
+
 
 
 
