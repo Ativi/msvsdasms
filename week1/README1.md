@@ -1256,3 +1256,10 @@ C100 VP 0 66.72fF
 ```
 ![compare 14 and 15](https://user-images.githubusercontent.com/68071764/220644365-b4894f2a-b01d-4e6d-be66-d4e7fdfc4ad7.png)
 
+
+## Conclusion
+- In summary, pre-layout simulation and post-layout simulation yield slightly different waveforms due to the consideration of parasitic capacitances and resistances in post-layout simulations, which are not considered in pre-layout simulations. Moreover, post-layout simulations using different tools like Magic and ALIGN also result in a variation of parasitic effects and delay, with ALIGN showing lower parasitic effects and a lower delay than Magic during post-layout simulations.
+
+# References
+- https://github.com/ALIGN-analoglayout/ALIGN-public
+- http://opencircuitdesign.com/magic/
