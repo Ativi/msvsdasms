@@ -437,3 +437,8 @@ V6 f 0 0 pulse 0 2.5 0.6n 10p 10p 1n 2n
  ```
  ![post_layout custom](https://user-images.githubusercontent.com/68071764/219789771-0891073d-f57e-4f3a-a1f6-cbae63e2a6d4.png)
 
+## References
+
+- https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html
+- http://opencircuitdesign.com/magic/
+- http://opencircuitdesign.com/open_pdks/
