@@ -256,6 +256,11 @@ After a successful run the following message is displayed:
 - In LVS, Magic extracts the netlist of the layout and compares it with the original circuit netlist to validate the accuracy of the physical implementation. The results of the layout extraction are stored in temp-sense-gen/flow/objects/.
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## References
+
+- https://github.com/idea-fasoc/OpenFASOC
+- https://github.com/The-OpenROAD-Project/yosys
+- https://github.com/The-OpenROAD-Project/OpenROAD
+- https://github.com/rakshit-23/OpenFASOC
 
 
