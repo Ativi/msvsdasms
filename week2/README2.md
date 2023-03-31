@@ -277,7 +277,8 @@ After a successful run the following message is displayed:
 
 - In the context of an AVSD op-amp, level shift refers to the process of changing the voltage level of a signal from one domain to another. For example, if an AVSD op-amp is used to shift a signal from a low-voltage domain to a high-voltage domain, the op-amp will shift the voltage levels of the signal by a certain amount, known as the level shift.The level shift provided by an AVSD op-amp is determined by the circuit's feedback network and the op-amp's gain. The feedback network is designed to provide a specific gain for the op-amp, which determines the amount of voltage shift applied to the input signal. For example, if the op-amp has a gain of 2 and the input signal is 1V, the output signal will be shifted by 2V.
 
-![AVSD_OPAMP_INPUT1_2](https://user-images.githubusercontent.com/68071764/229119570-a9b3b47f-5ebd-48bb-8166-dafc6320046e.png)
+![VirtualBox_opensource_eda_ubuntu Clone_31_03_2023_18_10_14](https://user-images.githubusercontent.com/68071764/229122593-3176e733-f0e8-43a9-a249-2f619edf0e7c.png)
+
 
 ![AVSD_OUT2](https://user-images.githubusercontent.com/68071764/229121792-da52138e-d788-4eb9-9035-75314dcc54cf.png)
 
