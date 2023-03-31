@@ -264,3 +264,21 @@ After a successful run the following message is displayed:
 - https://github.com/rakshit-23/OpenFASOC
 
 
+
+# WEEK 6 AI's
+
+#### 1. Design And Align Simulation Of  window Comparator
+- A window comparator is an electronic circuit that compares an input signal with two reference voltages and provides an output signal based on whether the input signal is within or outside of the voltage range defined by the reference voltages. It is often used in analog-to-digital converters, sensor interfaces, and other applications where it is necessary to determine whether a signal is above or below a certain threshold.
+
+
+#### AVSD_OPAMP
+
+![avsd_opamp](https://user-images.githubusercontent.com/68071764/229117508-3b3c27ee-d8fe-40f5-93d6-4f76a20115ed.png)
+
+- In the context of an AVSD op-amp, level shift refers to the process of changing the voltage level of a signal from one domain to another. For example, if an AVSD op-amp is used to shift a signal from a low-voltage domain to a high-voltage domain, the op-amp will shift the voltage levels of the signal by a certain amount, known as the level shift.The level shift provided by an AVSD op-amp is determined by the circuit's feedback network and the op-amp's gain. The feedback network is designed to provide a specific gain for the op-amp, which determines the amount of voltage shift applied to the input signal. For example, if the op-amp has a gain of 2 and the input signal is 1V, the output signal will be shifted by 2V.
+
+![AVSD_OPAMP_INPUT1_2](https://user-images.githubusercontent.com/68071764/229119570-a9b3b47f-5ebd-48bb-8166-dafc6320046e.png)
+
+![AVSD_OUT2](https://user-images.githubusercontent.com/68071764/229121792-da52138e-d788-4eb9-9035-75314dcc54cf.png)
+
+![OUTPUT_AVSD](https://user-images.githubusercontent.com/68071764/229122311-0dc0211f-21e0-4cd5-9b4c-320c4e0e6709.png)
