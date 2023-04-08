@@ -112,5 +112,4 @@ plot OUT1 OUT2
 ![schematic](https://user-images.githubusercontent.com/68071764/230721499-5ef15d14-f6ef-4de7-8e46-609c72d280c8.png)
 ![output3](https://user-images.githubusercontent.com/68071764/230721505-943db3d5-9f8a-43fe-aade-577d9c8b137f.png)
 
-![VirtualBox_opensource_eda_ubuntu Clone_08_04_2023_18_13_04](https://user-images.githubusercontent.com/68071764/230721748-7a918dcf-b333-4544-bb12-cbdd845f5a9b.png)
 
