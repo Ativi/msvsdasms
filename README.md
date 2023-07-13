@@ -1,5 +1,7 @@
 # VSD Mixed-signal PD Research Program
-
+- This repository provides details about a program "VSD Mixed signal PD research" that utilizes SKY130 PDK and open-source flow tools for chip tape-out.
+- To remain in the program, participants need to complete designated tasks and fulfill specific requirements on a weekly basis.
+- I have organized my weekly tasks and simulations into separate directories for each week.
 
 ### Weekly AI's 
 
