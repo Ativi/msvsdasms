@@ -43,12 +43,12 @@ Weekly AI's
 |29. |  Update your findings on your GitHub repo with the title “Week 3”| updated |
 
 
-**|S. No.   |    Week 4 AI's    |   Status  | **
+|S. No.   |    Week 4 AI's    |   Status  |
 | 30.| Designed  one-bit analog-to-digital converter (ADC) |  completed |
 | 31.| Post-layout simulation using ALIGN |  completed |
 | 32.| Pre-Layout Simulation of Ring oscillator with One bit ADC|  completed |
 
-**|S. No.   |    Week 5 AI's    |   Status  | **
+|S. No.   |    Week 5 AI's    |   Status  |
 | 33.| OpenFASoC Flow For RingOscillator and OneBitADC |  completed |
 | 34.| RTL to GDS flow is successful using OpenFASOC|  completed |
 
